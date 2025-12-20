@@ -1,13 +1,582 @@
-<html>
-    <head>
-        <title>
-            List of Yazatas in Zoroastrianism
-        </title>
-    </head>
-<body>
-    <h1>
-        Yazatas
-    </h1>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 124 Yazatas</title>
+    
+    <!-- Import Vazirmatn for beautiful Persian Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary: #8E2424;
+            --primary-hover: #a62b2b;
+            --bg: #f4f6f8;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+            --text-light: #607d8b;
+            
+            /* --- CATEGORY (GROUP) COLORS --- */
+            --cat-amesha-bg: #FFF8E1; --cat-amesha-text: #FF6F00;
+            --cat-calendar-bg: #E8EAF6; --cat-calendar-text: #283593;
+            --cat-nature-bg: #F1F8E9; --cat-nature-text: #33691E;
+            --cat-time-bg: #ECEFF1; --cat-time-text: #37474F;
+            --cat-abstract-bg: #FBE9E7; --cat-abstract-text: #BF360C;
+            --cat-ritual-bg: #EFEBE9; --cat-ritual-text: #4E342E;
+            --cat-social-bg: #F9FBE7; --cat-social-text: #827717;
+            --cat-minor-bg: #FAFAFA; --cat-minor-text: #424242;
+
+            /* --- GENDER COLORS --- */
+            --g-male-bg: #e3f2fd; --g-male-text: #1565c0;       
+            --g-female-bg: #fce4ec; --g-female-text: #c2185b;   
+            --g-neutral-bg: #f3e5f5; --g-neutral-text: #7b1fa2; 
+            --g-collective-bg: #e0f2f1; --g-collective-text: #00695c; 
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            padding: 20px; 
+            margin: 0; 
+            line-height: 1.5;
+        }
+        
+        header { text-align: center; margin-bottom: 30px; margin-top: 20px; }
+        h1 { color: var(--primary); margin: 0 0 8px 0; font-size: 2.2rem; }
+        small { color: var(--text-light); font-size: 1rem; }
+
+        /* TOC Styles */
+        .toc {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .toc h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 8px;
+        }
+        .toc li { margin-bottom: 5px; }
+        .toc a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .toc a:hover { color: var(--primary); text-decoration: underline; }
+
+        /* Sticky Controls */
+        .controls { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(244, 246, 248, 0.95); 
+            backdrop-filter: blur(10px);
+            z-index: 100; 
+            padding: 15px 0; 
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .controls-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%; 
+            padding: 14px 25px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 50px;
+            font-size: 16px; 
+            outline: none; 
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        input:focus { 
+            border-color: var(--primary); 
+            box-shadow: 0 4px 10px rgba(142, 36, 36, 0.15); 
+        }
+
+        /* Filter Buttons */
+        .filters { 
+            display: flex; 
+            gap: 10px; 
+            overflow-x: auto; 
+            padding: 15px 5px; 
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+        }
+        .filters::-webkit-scrollbar { display: none; }
+        
+        button {
+            white-space: nowrap; 
+            padding: 8px 18px; 
+            border: 1px solid #ddd; 
+            border-radius: 20px;
+            background: #fff; 
+            cursor: pointer; 
+            font-weight: 600;
+            color: var(--text-light);
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        button:hover { background: #f0f0f0; transform: translateY(-1px); }
+        button.active { 
+            background: var(--primary); 
+            color: white; 
+            border-color: var(--primary); 
+            box-shadow: 0 2px 5px rgba(142, 36, 36, 0.3);
+        }
+
+        /* Grid */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 20px; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        .card { 
+            background: var(--card-bg); 
+            border-radius: 16px; 
+            padding: 20px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.4s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        
+        .top { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; margin-bottom: 12px; }
+        
+        /* Badges */
+        .badge { padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .gender-pill {
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        /* Gender Colors */
+        .g-Male { background: var(--g-male-bg); color: var(--g-male-text); }
+        .g-Female { background: var(--g-female-bg); color: var(--g-female-text); }
+        .g-Neutral { background: var(--g-neutral-bg); color: var(--g-neutral-text); }
+        .g-Collective { background: var(--g-collective-bg); color: var(--g-collective-text); }
+
+        .names { margin-bottom: 5px; }
+        .en-name { display: block; font-size: 1.3rem; font-weight: 700; color: #2c3e50; line-height: 1.2; }
+        
+        .fa-name { 
+            display: block; 
+            font-family: 'Vazirmatn', Tahoma, sans-serif; 
+            color: var(--primary); 
+            font-size: 1.25rem; 
+            margin-top: 6px; 
+            font-weight: 500;
+        }
+        
+        .alias { color: #888; font-style: italic; font-size: 0.9rem; margin-bottom: 15px; display: block; }
+        
+        .details-box {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: auto;
+        }
+
+        .row { font-size: 0.9rem; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+        .row:last-child { margin-bottom: 0; }
+        .label { font-weight: 600; color: #7f8c8d; font-size: 0.85rem; }
+        .val { text-align: right; font-weight: 500; }
+
+        /* Dynamic Classes for Colors */
+        .c-Amesha { background: var(--cat-amesha-bg); color: var(--cat-amesha-text); }
+        .c-Calendar { background: var(--cat-calendar-bg); color: var(--cat-calendar-text); }
+        .c-Nature { background: var(--cat-nature-bg); color: var(--cat-nature-text); }
+        .c-Time { background: var(--cat-time-bg); color: var(--cat-time-text); }
+        .c-Abstract { background: var(--cat-abstract-bg); color: var(--cat-abstract-text); }
+        .c-Ritual { background: var(--cat-ritual-bg); color: var(--cat-ritual-text); }
+        .c-Social { background: var(--cat-social-bg); color: var(--cat-social-text); }
+        .c-Minor { background: var(--cat-minor-bg); color: var(--cat-minor-text); }
+
+        /* Pagination Styles */
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .page-btn {
+            padding: 8px 14px;
+            border: 1px solid #ddd;
+            background: #fff;
+            color: var(--text);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .page-btn:hover:not(:disabled) {
+            background: #f0f0f0;
+            border-color: #bbb;
+        }
+        
+        .page-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .page-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .page-info {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+            .toc ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The 124 Yazatas</h1>
+    <small>Search by English, Persian, or Number</small>
+</header>
+
+<div class="toc">
+    <h3>Table of Contents</h3>
+    <ul>
+        <li><a href="#" onclick="setCat('Amesha', document.querySelector('.filters button:nth-child(2)')); return false;">I. The Supreme & The Amesha Spentas</a></li>
+        <li><a href="#" onclick="setCat('Calendar', document.querySelector('.filters button:nth-child(3)')); return false;">II. The Calendar Yazatas (The Roz)</a></li>
+        <li><a href="#" onclick="setCat('Nature', document.querySelector('.filters button:nth-child(4)')); return false;">III. Celestial & Nature Yazatas</a></li>
+        <li><a href="#" onclick="setCat('Social', document.querySelector('.filters button:nth-child(8)')); return false;">IV. Guardians of Society & Location</a></li>
+        <li><a href="#" onclick="setCat('Time', document.querySelector('.filters button:nth-child(5)')); return false;">V. Lords of Time (Gah & Gahambar)</a></li>
+        <li><a href="#" onclick="setCat('Abstract', document.querySelector('.filters button:nth-child(6)')); return false;">VI. Abstract Virtues & Qualities</a></li>
+        <li><a href="#" onclick="setCat('Ritual', document.querySelector('.filters button:nth-child(7)')); return false;">VII. Yazatas of Ritual & Priesthood</a></li>
+        <li><a href="#" onclick="setCat('Minor', document.querySelector('.filters button:nth-child(9)')); return false;">VIII. Specialized & Minor Yazatas</a></li>
+    </ul>
+</div>
+
+<div class="controls">
+    <div class="controls-inner">
+        <input type="text" id="search" placeholder="Search..." oninput="handleSearch()">
+        <div class="filters">
+            <button class="active" onclick="setCat('all', this)">All</button>
+            <button onclick="setCat('Amesha', this)">Amesha Spentas</button>
+            <button onclick="setCat('Calendar', this)">Calendar</button>
+            <button onclick="setCat('Nature', this)">Nature</button>
+            <button onclick="setCat('Time', this)">Time</button>
+            <button onclick="setCat('Abstract', this)">Virtues</button>
+            <button onclick="setCat('Ritual', this)">Ritual</button>
+            <button onclick="setCat('Social', this)">Social</button>
+            <button onclick="setCat('Minor', this)">Minor</button>
+        </div>
+    </div>
+</div>
+
+<div class="grid" id="list"></div>
+<div class="pagination-container" id="pagination"></div>
+
+<script>
+    const db = [
+        {no:1, n:"Ahura Mazda", s:"اهورامزدا", a:"Ohrmazd", c:"Amesha Spenta", g:"Beyond Gender", r:"Supreme Creator", w:"All Creation"},
+        {no:2, n:"Vohu Manah", s:"بهمن", a:"Bahman", c:"Amesha Spenta", g:"Male", r:"Good Mind", w:"Cattle"},
+        {no:3, n:"Asha Vahishta", s:"اردیبهشت", a:"Ardibehesht", c:"Amesha Spenta", g:"Male", r:"Best Truth", w:"Fire"},
+        {no:4, n:"Khshathra Vairya", s:"شهریور", a:"Shahrewar", c:"Amesha Spenta", g:"Male", r:"Desirable Dominion", w:"Metals"},
+        {no:5, n:"Spenta Armaiti", s:"اسفند", a:"Spendarmad", c:"Amesha Spenta", g:"Female", r:"Devotion", w:"Earth"},
+        {no:6, n:"Haurvatat", s:"خرداد", a:"Khordad", c:"Amesha Spenta", g:"Female", r:"Wholeness", w:"Water"},
+        {no:7, n:"Ameretat", s:"امرداد", a:"Amurdad", c:"Amesha Spenta", g:"Female", r:"Immortality", w:"Plants"},
+        {no:8, n:"Atar", s:"آذر", a:"Adar", c:"Calendar", g:"Male", r:"Fire", w:"All Fires"},
+        {no:9, n:"Aredvi Sura Anahita", s:"آبان/ناهید", a:"Aban/Nahid", c:"Calendar", g:"Female", r:"Fertility", w:"Waters"},
+        {no:10, n:"Hvare-khshaeta", s:"خورشید", a:"Khorshed", c:"Calendar", g:"Male", r:"Radiant Sun", w:"The Sun"},
+        {no:11, n:"Mah", s:"ماه", a:"Mohor", c:"Calendar", g:"Male", r:"The Moon", w:"The Moon"},
+        {no:12, n:"Tishtrya", s:"تیر", a:"Tir", c:"Calendar", g:"Male", r:"Sirius Star", w:"Rain"},
+        {no:13, n:"Geush Urvan", s:"گوش", a:"Gosh", c:"Calendar", g:"Neutral", r:"Soul of Cow", w:"Animals"},
+        {no:14, n:"Mithra", s:"مهر", a:"Mehr", c:"Calendar", g:"Male", r:"Covenant", w:"Oaths"},
+        {no:15, n:"Sraosha", s:"سروش", a:"Soroush", c:"Calendar", g:"Male", r:"Obedience", w:"Prayer"},
+        {no:16, n:"Rashnu", s:"رشن", a:"Rashn", c:"Calendar", g:"Male", r:"Justice", w:"Truth"},
+        {no:17, n:"Fravashi", s:"فروردین", a:"Farvardin", c:"Calendar", g:"Collective", r:"Ancestral Spirits", w:"Souls"},
+        {no:18, n:"Verethragna", s:"بهرام", a:"Bahram", c:"Calendar", g:"Male", r:"Victory", w:"Travelers"},
+        {no:19, n:"Raman", s:"رام", a:"Ram", c:"Calendar", g:"Male", r:"Peace/Joy", w:"Atmosphere"},
+        {no:20, n:"Vata", s:"باد", a:"Govad", c:"Calendar", g:"Male", r:"Wind", w:"Air"},
+        {no:21, n:"Daena", s:"دین", a:"Din", c:"Calendar", g:"Female", r:"Conscience", w:"Religion"},
+        {no:22, n:"Ashi Vanguhi", s:"ارد", a:"Ard", c:"Calendar", g:"Female", r:"Reward", w:"Blessings"},
+        {no:23, n:"Arshtat", s:"اشتاد", a:"Ashtad", c:"Calendar", g:"Female", r:"Rectitude", w:"Order"},
+        {no:24, n:"Asman", s:"آسمان", a:"Asman", c:"Calendar", g:"Male", r:"Sky", w:"Sky"},
+        {no:25, n:"Zam", s:"زامیاد", a:"Zamyad", c:"Calendar", g:"Female", r:"Earth/Land", w:"Land"},
+        {no:26, n:"Manthra Spenta", s:"مهراسپند", a:"Mahraspand", c:"Calendar", g:"Male", r:"Holy Word", w:"Scripture"},
+        {no:27, n:"Anaghra Raocha", s:"انیران", a:"Aneran", c:"Calendar", g:"Neutral", r:"Endless Light", w:"Paradise"},
+        {no:28, n:"Apam Napat", s:"برز ایزد", a:"Burz Yazad", c:"Nature", g:"Male", r:"Grandson of Waters", w:"Deep Waters"},
+        {no:29, n:"Vanant", s:"وننت", a:"Vanant", c:"Nature", g:"Male", r:"Conquering Star", w:"West Horizon"},
+        {no:30, n:"Satavaesa", s:"ستویس", a:"Satavaes", c:"Nature", g:"Male", r:"Rain Helper", w:"South Horizon"},
+        {no:31, n:"Haptoiringa", s:"هفت‌اورنگ", a:"Haftorang", c:"Nature", g:"Male", r:"Seven-Throned", w:"North Horizon"},
+        {no:32, n:"Paoiryaenis", s:"پروین", a:"Parvin", c:"Nature", g:"Collective", r:"The Pleiades", w:"Fertility"},
+        {no:33, n:"Ushah", s:"اوش‌بام", a:"Ushbami", c:"Nature", g:"Female", r:"Dawn Goddess", w:"Dawn"},
+        {no:34, n:"Thwasha", s:"توشه", a:"Thwasha", c:"Nature", g:"Male", r:"Space", w:"Firmament"},
+        {no:35, n:"Zurvan", s:"زمان", a:"Zaman", c:"Time", g:"Neutral", r:"Time", w:"Time"},
+        {no:36, n:"Vayu", s:"وای", a:"Vay", c:"Nature", g:"Male", r:"Void/Wind", w:"Void"},
+        {no:37, n:"Ayo-khshusta", s:"ایوخشست", a:"Ayokhshust", c:"Nature", g:"Male", r:"Molten Metal", w:"Metallurgy"},
+        {no:38, n:"Ahurani", s:"اهوران", a:"Ahuran", c:"Nature", g:"Collective", r:"Water Spirits", w:"Rain Clouds"},
+        {no:39, n:"Hukairya", s:"هوگر", a:"Hugar", c:"Nature", g:"Female", r:"Good Activity", w:"Water Sources"},
+        {no:40, n:"Vouru-Kasha", s:"فراخ‌کرت", a:"Frakhvkard", c:"Nature", g:"Male", r:"Cosmic Sea", w:"Ocean"},
+        {no:41, n:"Gairis", s:"کوه‌ها", a:"Gairis", c:"Nature", g:"Plural", r:"Mountains", w:"Stability"},
+        {no:42, n:"Rangha", s:"ارنگ", a:"Arang", c:"Nature", g:"Female", r:"Mythical River", w:"Boundaries"},
+        {no:43, n:"Vakhsh", s:"وخش", a:"Vakhsh", c:"Nature", g:"Male", r:"Growth", w:"River Surges"},
+        {no:44, n:"Nmanya", s:"نمانیا", a:"Nmanya", c:"Social", g:"Male", r:"Of the House", w:"Home"},
+        {no:45, n:"Visya", s:"ویسیا", a:"Visya", c:"Social", g:"Male", r:"Of the Village", w:"Village"},
+        {no:46, n:"Zantuma", s:"زنتوما", a:"Zantuma", c:"Social", g:"Male", r:"Of the District", w:"Tribe"},
+        {no:47, n:"Dahyuma", s:"دهیوما", a:"Dahyuma", c:"Social", g:"Male", r:"Of the Country", w:"Nation"},
+        {no:48, n:"Hadish", s:"هدیش", a:"Hadish", c:"Social", g:"Male", r:"Homestead", w:"Shelter"},
+        {no:49, n:"Havan", s:"هاون", a:"Havan", c:"Time", g:"Male", r:"Morning", w:"Sunrise-Noon"},
+        {no:50, n:"Rapithwin", s:"رپیتون", a:"Rapithwin", c:"Time", g:"Male", r:"Noon", w:"Noon-3PM"},
+        {no:51, n:"Uzirin", s:"اوزیرین", a:"Uzirin", c:"Time", g:"Male", r:"Afternoon", w:"3PM-Sunset"},
+        {no:52, n:"Aiwisruthrem", s:"ایویسروترم", a:"Aiwisruthrem", c:"Time", g:"Male", r:"Evening", w:"Sunset-Midnight"},
+        {no:53, n:"Ushahin", s:"اوشهین", a:"Ushahin", c:"Time", g:"Male", r:"Night", w:"Midnight-Dawn"},
+        {no:54, n:"Maidhyoi-Zaremaya", s:"میدیوزرم", a:"Mid-Spring", c:"Time", g:"Male", r:"Sky Creation", w:"Mid-Spring"},
+        {no:55, n:"Maidhyoi-Shema", s:"میدیوشم", a:"Mid-Summer", c:"Time", g:"Male", r:"Water Creation", w:"Mid-Summer"},
+        {no:56, n:"Paitishahya", s:"پتیش‌هیه", a:"Corn-Harvest", c:"Time", g:"Male", r:"Earth Creation", w:"Harvest"},
+        {no:57, n:"Ayathrima", s:"ایاترم", a:"Home-coming", c:"Time", g:"Male", r:"Plant Creation", w:"Homecoming"},
+        {no:58, n:"Maidhyarya", s:"میدیارم", a:"Mid-Winter", c:"Time", g:"Male", r:"Animal Creation", w:"Mid-Winter"},
+        {no:59, n:"Hamaspathmaedaya", s:"همسپت‌مدم", a:"All Souls", c:"Time", g:"Male", r:"Mankind Creation", w:"All Souls"},
+        {no:60, n:"Saredha", s:"سرد", a:"Saredha", c:"Time", g:"Male", r:"The Year", w:"Annual Cycle"},
+        {no:61, n:"Asnya", s:"اسنیا", a:"Asnya", c:"Time", g:"Plural", r:"Of the Day", w:"Daylight"},
+        {no:62, n:"Akhshti Ham-vanghu", s:"آشتی", a:"Akhshti", c:"Abstract", g:"Female", r:"Peace", w:"Concord"},
+        {no:63, n:"Rata", s:"راد", a:"Rad", c:"Abstract", g:"Female", r:"Charity", w:"Generosity"},
+        {no:64, n:"Dahma Afriti", s:"دهمان", a:"Dahman", c:"Abstract", g:"Female", r:"Benediction", w:"Blessings"},
+        {no:65, n:"Erethe", s:"ارته", a:"Ereth", c:"Abstract", g:"Female", r:"Truth", w:"Accuracy"},
+        {no:66, n:"Rasanstat", s:"راسن‌تات", a:"Rasanstat", c:"Abstract", g:"Female", r:"Righteousness", w:"Standing"},
+        {no:67, n:"Ama", s:"آما", a:"Ama", c:"Abstract", g:"Male", r:"Strength", w:"Power"},
+        {no:68, n:"Drvaspa", s:"گوسپند", a:"Gospar", c:"Abstract", g:"Female", r:"Healthy Horses", w:"Herds"},
+        {no:69, n:"Chista", s:"چیستا", a:"Chista", c:"Abstract", g:"Female", r:"Instruction", w:"Knowledge"},
+        {no:70, n:"Chisti", s:"چیست", a:"Chist", c:"Abstract", g:"Female", r:"Insight", w:"Intellect"},
+        {no:71, n:"Parendi", s:"پرند", a:"Parendi", c:"Abstract", g:"Female", r:"Abundance", w:"Treasures"},
+        {no:72, n:"Saoka", s:"سوک", a:"Saok", c:"Abstract", g:"Female", r:"Prosperity", w:"Material Benefit"},
+        {no:73, n:"Ham-vareti", s:"هم‌وری", a:"Ham-vari", c:"Abstract", g:"Female", r:"Courage", w:"Bravery"},
+        {no:74, n:"Uparatat", s:"اوپرتات", a:"Uparat", c:"Abstract", g:"Female", r:"Superiority", w:"Success"},
+        {no:75, n:"Arja", s:"ارج", a:"Arj", c:"Abstract", g:"Male", r:"Value", w:"Worth"},
+        {no:76, n:"Mizda", s:"مزد", a:"Mizd", c:"Abstract", g:"Neutral", r:"Wage/Prize", w:"Karma"},
+        {no:77, n:"Varah", s:"ور", a:"Var", c:"Abstract", g:"Male", r:"Ordeal", w:"Trials"},
+        {no:78, n:"Marzhdik", s:"مرزدیک", a:"Marzhdik", c:"Abstract", g:"Male", r:"Mercy", w:"Compassion"},
+        {no:79, n:"Hujyaiti", s:"هوجیات", a:"Hujiyash", c:"Abstract", g:"Female", r:"Good Life", w:"Well-being"},
+        {no:80, n:"Savanghi", s:"سوا", a:"Savah", c:"Abstract", g:"Male", r:"Profit", w:"Gain"},
+        {no:81, n:"Rastat", s:"راست", a:"Rast", c:"Abstract", g:"Female", r:"Reality", w:"Truth"},
+        {no:82, n:"Wizir", s:"ویزیر", a:"Wizidhar", c:"Abstract", g:"Male", r:"Decision", w:"Judgment"},
+        {no:83, n:"Ada", s:"آدا", a:"Ada", c:"Abstract", g:"Female", r:"Reward", w:"Gifts"},
+        {no:84, n:"Paurvatat", s:"پرواتات", a:"Paurvatat", c:"Abstract", g:"Female", r:"Pre-eminence", w:"Leadership"},
+        {no:85, n:"Nairya Ham-vareti", s:"نیری‌همواری", a:"Nairy-Hamvari", c:"Abstract", g:"Female", r:"Manly Defense", w:"Defense"},
+        {no:86, n:"Vidhva", s:"ویدوا", a:"Vidhva", c:"Abstract", g:"Female", r:"Skill", w:"Competence"},
+        {no:87, n:"Drvatat", s:"درواتات", a:"Drvatat", c:"Abstract", g:"Female", r:"Soundness", w:"Health"},
+        {no:88, n:"Aibi-gaya", s:"ایبی‌گیه", a:"Aibi-gaya", c:"Abstract", g:"Neutral", r:"Super-Life", w:"Survival"},
+        {no:89, n:"Spenta Mainyu", s:"سپنتا مینو", a:"Spenamino", c:"Ritual", g:"Male", r:"Holy Spirit", w:"Creativity"},
+        {no:90, n:"Khvarenah", s:"فر", a:"Farr", c:"Ritual", g:"Neutral", r:"Glory", w:"Destiny"},
+        {no:91, n:"Kavaem Hvareno", s:"فر کیانی", a:"Kayanian Farr", c:"Ritual", g:"Neutral", r:"Royal Glory", w:"Kingship"},
+        {no:92, n:"Haoma", s:"هوم", a:"Hom", c:"Ritual", g:"Male", r:"Sacred Plant", w:"Healing"},
+        {no:93, n:"Airyaman", s:"ایریمن", a:"Erman", c:"Ritual", g:"Male", r:"Friendship", w:"Weddings"},
+        {no:94, n:"Nairyosangha", s:"نیریوسنگ", a:"Nairyosang", c:"Ritual", g:"Male", r:"Messenger", w:"Royal Fire"},
+        {no:95, n:"Baresman", s:"برسم", a:"Barsom", c:"Ritual", g:"Male", r:"Sacred Twigs", w:"Connection"},
+        {no:96, n:"Zaothra", s:"زور", a:"Zor", c:"Ritual", g:"Female", r:"Libation", w:"Offerings"},
+        {no:97, n:"Izhha", s:"ایژا", a:"Izh", c:"Ritual", g:"Female", r:"Zeal", w:"Devotion"},
+        {no:98, n:"Tushnamaiti", s:"تشنامیتی", a:"Tushnamat", c:"Ritual", g:"Female", r:"Silence", w:"Meditation"},
+        {no:99, n:"Frasasti", s:"فراسستی", a:"Frasast", c:"Ritual", g:"Female", r:"Fulfillment", w:"Wishes"},
+        {no:100, n:"Zarathustrotema", s:"زرتشتروتمه", a:"Zartoshttum", c:"Ritual", g:"Male", r:"High Priest", w:"Priesthood"},
+        {no:101, n:"Ahu", s:"اهو", a:"Ahu", c:"Ritual", g:"Male", r:"Lord", w:"Leadership"},
+        {no:102, n:"Ratu", s:"رد", a:"Rad", c:"Ritual", g:"Male", r:"Judge", w:"Guidance"},
+        {no:103, n:"Damoish Upamana", s:"دامی", a:"Dami", c:"Ritual", g:"Male", r:"Cursing Force", w:"Ban on Sin"},
+        {no:104, n:"Vispa Ratavo", s:"ویسپرد", a:"Visparad", c:"Ritual", g:"Collective", r:"All Lords", w:"Order"},
+        {no:105, n:"Asne Khratu", s:"آسن‌خرد", a:"Asn-kherad", c:"Minor", g:"Male", r:"Innate Wisdom", w:"Instinct"},
+        {no:106, n:"Gaosho-Sruta Khratu", s:"گوش‌سرود خرد", a:"Goshosrud", c:"Minor", g:"Male", r:"Acquired Wisdom", w:"Schooling"},
+        {no:107, n:"Fradat-Fshu", s:"فرادات‌گوش", a:"Fradat-Gosh", c:"Minor", g:"Male", r:"Increaser Cattle", w:"Breeding"},
+        {no:108, n:"Fradat-Vira", s:"فرادات‌ویر", a:"Fradat-Vir", c:"Minor", g:"Male", r:"Increaser Men", w:"Population"},
+        {no:109, n:"Fradat-Vispam-Hujyaiti", s:"فرادات‌هوجیات", a:"Fradat-Hujiyash", c:"Minor", g:"Male", r:"Increaser Good Life", w:"Happiness"},
+        {no:110, n:"Berejya", s:"برجیا", a:"Berej", c:"Minor", g:"Male", r:"Cultivator", w:"Crops"},
+        {no:111, n:"Vispa Haurvata", s:"هرویسپ خرداد", a:"Harvisp-Khordad", c:"Minor", g:"Collective", r:"All Waters", w:"Hydrosphere"},
+        {no:112, n:"Vispa Urvara", s:"هرویسپ اوروار", a:"Harvisp-Urvar", c:"Minor", g:"Collective", r:"All Plants", w:"Biosphere"},
+        {no:113, n:"Ashaunam Fravashino", s:"اردافروهر", a:"Arda-Fravash", c:"Minor", g:"Collective", r:"Fravashis", w:"Stability"},
+        {no:114, n:"Geush Tashan", s:"گوش‌تراش", a:"Gosh-Tarash", c:"Minor", g:"Male", r:"Shaper of Ox", w:"Biology"},
+        {no:115, n:"Thrita", s:"تریتا", a:"Thrit", c:"Minor", g:"Male", r:"Third One", w:"Medicine"},
+        {no:116, n:"Parodars", s:"خروش", a:"Kahrkatak", c:"Minor", g:"Male", r:"Rooster", w:"Waking"},
+        {no:117, n:"Durae-kaeta", s:"دوره‌کیتا", a:"Durae-kaeta", c:"Minor", g:"Male", r:"Far-Seeing", w:"Prophecy"},
+        {no:118, n:"Paitishta", s:"پتیشتا", a:"Paitishta", c:"Minor", g:"Male", r:"Resistance", w:"Steadfastness"},
+        {no:119, n:"Duraosha", s:"دوره‌اوشا", a:"Duraosha", c:"Minor", g:"Male", r:"Death-Keeper", w:"Survival"},
+        {no:120, n:"Hekha", s:"هخا", a:"Hakha", c:"Minor", g:"Male", r:"Friend", w:"Friendship"},
+        {no:121, n:"Narava", s:"نراوا", a:"Narava", c:"Minor", g:"Male", r:"Manliness", w:"Virility"},
+        {no:122, n:"Thwarestar", s:"توارستار", a:"Thwarestar", c:"Minor", g:"Male", r:"Artisan", w:"Craft"},
+        {no:123, n:"Usha", s:"اوشا", a:"Usha", c:"Minor", g:"Female", r:"Dawn Light", w:"First Light"},
+        {no:124, n:"Vazista", s:"وازیست", a:"Vazisht", c:"Minor", g:"Male", r:"Swiftest", w:"Lightning"}
+    ];
+
+    let activeCat = 'all';
+    let currentPage = 1;
+    const itemsPerPage = 12;
+
+    function getGenderClass(g) {
+        if(g.toLowerCase().includes('female')) return 'g-Female';
+        if(g.toLowerCase().includes('male') && !g.toLowerCase().includes('neutral')) return 'g-Male';
+        if(g.toLowerCase().includes('collective') || g.toLowerCase().includes('plural')) return 'g-Collective';
+        return 'g-Neutral';
+    }
+
+    function renderPagination(totalItems) {
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        const container = document.getElementById('pagination');
+        container.innerHTML = '';
+        
+        if (totalPages <= 1) return;
+
+        // Prev Button
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'page-btn';
+        prevBtn.innerText = 'Prev';
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.onclick = () => { if(currentPage > 1) { currentPage--; runFilter(); }};
+        container.appendChild(prevBtn);
+
+        // Page Info (Mobile Friendly)
+        const info = document.createElement('span');
+        info.className = 'page-info';
+        info.innerText = `Page ${currentPage} of ${totalPages}`;
+        container.appendChild(info);
+
+        // Next Button
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'page-btn';
+        nextBtn.innerText = 'Next';
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.onclick = () => { if(currentPage < totalPages) { currentPage++; runFilter(); }};
+        container.appendChild(nextBtn);
+    }
+
+    function runFilter(resetPage = false) {
+        if (resetPage) currentPage = 1;
+
+        const term = document.getElementById('search').value.toLowerCase();
+        const box = document.getElementById('list');
+        box.innerHTML = '';
+
+        // Filter full dataset
+        const filtered = db.filter(item => {
+            const catMatch = activeCat === 'all' || item.c.includes(activeCat);
+            const txtMatch = item.n.toLowerCase().includes(term) || 
+                             item.a.toLowerCase().includes(term) || 
+                             item.s.includes(term) || 
+                             item.r.toLowerCase().includes(term) || 
+                             item.no.toString().includes(term);
+            return catMatch && txtMatch;
+        });
+
+        // Pagination Logic
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const displayItems = filtered.slice(start, end);
+
+        if(displayItems.length === 0) {
+            box.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #888;">No Yazatas found matching your criteria.</div>';
+            renderPagination(0);
+            return;
+        }
+
+        // Render Cards
+        displayItems.forEach(i => {
+            const div = document.createElement('div');
+            div.className = 'card';
+            
+            // Generate Gender Class
+            const gClass = getGenderClass(i.g);
+            
+            div.innerHTML = `
+                <div class="top">
+                    <span style="font-weight:900; color:#b0bec5;">#${i.no}</span>
+                    <span class="badge c-${i.c.split(' ')[0]}">${i.c}</span>
+                </div>
+                <div class="names">
+                    <span class="en-name">${i.n}</span>
+                    <span class="fa-name" dir="rtl">${i.s}</span>
+                </div>
+                <span class="alias">${i.a}</span>
+                
+                <div class="details-box">
+                    <div class="row">
+                        <span class="label">Gender:</span> 
+                        <span class="gender-pill ${gClass}">${i.g}</span>
+                    </div>
+                    <div class="row"><span class="label">Role:</span> <span class="val">${i.r}</span></div>
+                    <div class="row"><span class="label">Guardian:</span> <span class="val">${i.w}</span></div>
+                </div>
+            `;
+            box.appendChild(div);
+        });
+
+        renderPagination(filtered.length);
+        
+        // Scroll to top of list if we changed pages (only if filtered list exists)
+        if(filtered.length > 0) {
+            // Optional: box.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function setCat(cat, btn) {
+        activeCat = cat;
+        document.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        if(btn) btn.classList.add('active');
+        document.getElementById('search').value = '';
+        runFilter(true);
+    }
+
+    function handleSearch() {
+        runFilter(true);
+    }
+
+    // Initialize
+    runFilter();
+</script>
+</body>
 </html>
