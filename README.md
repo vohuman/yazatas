@@ -1,0 +1,2 @@
+# yazatas
+Yazatas in Zoroastrianism
