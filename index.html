@@ -170,7 +170,8 @@
                 "category_name": "The Creator & The Amesha Spentas",
                 "description": "The Holy Immortals: These are the highest divinities, representing the aspects of God and guardians of the seven creations.",
                 "entities": [
-                  { "id": 1, "image_url": "", "name": "Ahura Mazda", "alias": "Ormazd", "persian_script": "اهورامزدا", "gender": "Beyond Gender", "meaning": "The Wise Lord", "role": "The Supreme Creator; Source of all good.", "guardian_of": "Mankind and the entire Good Creation." },
+                  // Added suppress_image: true for Ahura Mazda
+                  { "id": 1, "suppress_image": true, "image_url": "", "name": "Ahura Mazda", "alias": "Ormazd", "persian_script": "اهورامزدا", "gender": "Beyond Gender", "meaning": "The Wise Lord", "role": "The Supreme Creator; Source of all good.", "guardian_of": "Mankind and the entire Good Creation." },
                   { "id": 2, "image_url": "/images/Bahman.jpg", "name": "Vohu Manah", "alias": "Bahman", "persian_script": "بهمن", "gender": "Male", "meaning": "Good Mind / Good Purpose", "role": "Protecting the animal kingdom; guiding the soul to paradise.", "guardian_of": "Cattle and beneficial animals." },
                   { "id": 3, "image_url": "", "name": "Asha Vahishta", "alias": "Ardibehesht", "persian_script": "اردیبهشت", "gender": "Male", "meaning": "Best Truth / Best Righteousness", "role": "Upholding cosmic order and truth.", "guardian_of": "Fire (and by extension, energy)." },
                   { "id": 4, "image_url": "", "name": "Khshathra Vairya", "alias": "Shahrivar", "persian_script": "شهریور", "gender": "Male", "meaning": "Desirable Dominion / Ideal Power", "role": "Represents the strength and power of the Kingdom of God; protector of the weak.", "guardian_of": "Metals and minerals (the sky was historically seen as made of hard stone/metal)." },
@@ -390,18 +391,23 @@
         }
 
         function renderCard(entity) {
-            const imageHtml="";
             const theme = getGenderTheme(entity.gender);
             
             // Image Logic
-                   
-            imageHtml = entity.image_url
-                ? `<img src="${entity.image_url}" alt="${entity.name}" class="w-full h-full object-cover">`
-                : `<div class="w-full h-full flex flex-col items-center justify-center text-stone-300 bg-stone-50">
-                        <i class="fa-solid fa-image text-2xl mb-2 opacity-50"></i>
-                        <span class="text-[10px] font-cinzel uppercase tracking-widest opacity-50">Image Pending</span>
-                   </div>`;
-            imageHtml = entity.id == 1 ? "" : imageHtml;
+            let imageSectionHtml = '';
+            
+            if (!entity.suppress_image) {
+                const innerContent = entity.image_url 
+                    ? `<img src="${entity.image_url}" alt="${entity.name}" class="w-full h-full object-cover">`
+                    : `<div class="w-full h-full flex flex-col items-center justify-center text-stone-300 bg-stone-50">
+                            <i class="fa-solid fa-image text-2xl mb-2 opacity-50"></i>
+                            <span class="text-[10px] font-cinzel uppercase tracking-widest opacity-50">Image Pending</span>
+                       </div>`;
+                
+                imageSectionHtml = `<div class="w-full h-40 mb-5 bg-stone-50 rounded-xl border border-stone-100 overflow-hidden relative group-hover:shadow-md transition-shadow">
+                        ${innerContent}
+                    </div>`;
+            }
             
             return `
             <div class="group relative bg-white rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-stone-100 overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${theme.shadow} fade-in">
@@ -411,10 +417,8 @@
                 
                 <div class="p-7 flex flex-col flex-grow relative z-10">
                     
-                    <!-- Image Area -->
-                    <div class="w-full h-40 mb-5 bg-stone-50 rounded-xl border border-stone-100 overflow-hidden relative group-hover:shadow-md transition-shadow">
-                        ${imageHtml}
-                    </div>
+                    <!-- Image Area (Conditional) -->
+                    ${imageSectionHtml}
 
                     <!-- Header -->
                     <div class="flex justify-between items-start mb-4">
@@ -447,7 +451,7 @@
                             <i class="fa-solid fa-shield-halved text-amber-600/70 mt-1 text-xs"></i>
                             <div><strong class="text-gray-900 block text-xs uppercase tracking-wide opacity-70 mb-0.5">Guardian Of</strong>${entity.guardian_of}</div>
                         </div>
-                    <;/div>
+                    </div>
                 </div>
                 
                 <!-- Footer strip -->
