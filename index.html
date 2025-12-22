@@ -164,79 +164,958 @@
     <script>
         // --- 1. The Data ---
         const rawData = {
-          "zoroastrian_yazatas": {
-            "categories": [
-              {
-                "category_name": "The Creator & The Amesha Spentas",
-                "description": "The Holy Immortals: These are the highest divinities, representing the aspects of God and guardians of the seven creations.",
-                "entities": [
-                  // Added suppress_image: true for Ahura Mazda
-                  { "id": 1, "suppress_image": true, "image_url": "", "name": "Ahura Mazda", "alias": "Ormazd", "persian_script": "اهورامزدا", "gender": "Beyond Gender", "meaning": "The Wise Lord", "role": "The Supreme Creator; Source of all good.", "guardian_of": "Mankind and the entire Good Creation." },
-                  { "id": 2, "image_url": "/yazatas/images/Bahman.jpg", "name": "Vohu Manah", "alias": "Bahman", "persian_script": "بهمن", "gender": "Male", "meaning": "Good Mind / Good Purpose", "role": "Protecting the animal kingdom; guiding the soul to paradise.", "guardian_of": "Cattle and beneficial animals." },
-                  { "id": 3, "image_url": "", "name": "Asha Vahishta", "alias": "Ardibehesht", "persian_script": "اردیبهشت", "gender": "Male", "meaning": "Best Truth / Best Righteousness", "role": "Upholding cosmic order and truth.", "guardian_of": "Fire (and by extension, energy)." },
-                  { "id": 4, "image_url": "", "name": "Khshathra Vairya", "alias": "Shahrivar", "persian_script": "شهریور", "gender": "Male", "meaning": "Desirable Dominion / Ideal Power", "role": "Represents the strength and power of the Kingdom of God; protector of the weak.", "guardian_of": "Metals and minerals (the sky was historically seen as made of hard stone/metal)." },
-                  { "id": 5, "image_url": "", "name": "Spenta Armaiti", "alias": "Sepandarma", "persian_script": "سپندارمذ", "gender": "Female", "meaning": "Holy Devotion / Serenity", "role": "Represents patient service and earthly fertility.", "guardian_of": "Earth." },
-                  { "id": 6, "image_url": "", "name": "Haurvatat", "alias": "Khordad", "persian_script": "خرداد", "gender": "Female", "meaning": "Wholeness / Perfection", "role": "Associated with health, prosperity, and fullness.", "guardian_of": "Water." },
-                  { "id": 7, "image_url": "", "name": "Ameretat", "alias": "Amordad", "persian_script": "امرداد", "gender": "Female", "meaning": "Immortality / Deathlessness", "role": "Represents eternal life and the preservation of life force.", "guardian_of": "Plants and vegetation." }
-                ]
-              },
-              {
-                "category_name": "The Calendar Yazatas",
-                "description": "Lords of the Days: These Yazatas preside over the specific days of the Zoroastrian month (Siroza) and function as Hamkars (co-workers).",
-                "entities": [
-                  { "id": 8, "image_url": "", "name": "Daepadar", "alias": "Day-be-Azar", "persian_script": "دی‌به‌آذر", "gender": "N/A (Aspect of the Creator)", "meaning": "Creator's Day (before Fire)", "role": "Represents the Creator's wisdom intervening in the second week.", "guardian_of": "Wisdom/Time." },
-                  { "id": 9, "image_url": "", "name": "Adar", "alias": "Azar", "persian_script": "آذر", "gender": "Male", "meaning": "Fire", "role": "The son of Ahura Mazda; the visible sign of God's presence.", "guardian_of": "All fires (hearth, ritual, internal heat)." },
-                  { "id": 10, "image_url": "", "name": "Aban (Aredvi Sura Anahita)", "alias": "Aban / Nahid", "persian_script": "آبان / ناهید", "gender": "Female", "meaning": "The Waters", "role": "Purifier of the seed, womb, and milk; goddess of fertility.", "guardian_of": "All waters, rivers, and oceans." },
-                  { "id": 11, "image_url": "", "name": "Hvare Khshaeta", "alias": "Khorshid", "persian_script": "خورشید", "gender": "Male", "meaning": "The Shining Sun", "role": "The eye of Ahura Mazda; dispels darkness and pollution.", "guardian_of": "The Sun and solar energy." },
-                  { "id": 12, "image_url": "", "name": "Maonghah", "alias": "Mah", "persian_script": "ماه", "gender": "Male (Tradition)", "meaning": "The Moon", "role": "Keeper of the seed of the Bull; regulates tides and growth.", "guardian_of": "The Moon and gravitational cycles." },
-                  { "id": 13, "image_url": "", "name": "Tishtrya", "alias": "Tir", "persian_script": "تیر", "gender": "Male", "meaning": "The Star Sirius", "role": "Rainmaker; battles the demon of drought (Apaosha).", "guardian_of": "Rain and the star Sirius." },
-                  { "id": 14, "image_url": "", "name": "Geush Urvan", "alias": "Gosh", "persian_script": "گوش", "gender": "Female/Neutral", "meaning": "Soul of the Cow (Creation)", "role": "Represents the welfare of animals and the cry of the innocent.", "guardian_of": "Cattle and livestock." },
-                  { "id": 15, "image_url": "", "name": "Daepamehr", "alias": "Day-be-Mehr", "persian_script": "دی‌به‌مهر", "gender": "N/A (Aspect of the Creator)", "meaning": "Creator's Day (before Mithra)", "role": "Represents the Creator preceding the day of Covenant.", "guardian_of": "Divine Law." },
-                  { "id": 16, "image_url": "", "name": "Mithra", "alias": "Mehr", "persian_script": "مهر", "gender": "Male", "meaning": "Covenant / Contract", "role": "Judge of the soul at death; lord of wide pastures and light.", "guardian_of": "Promises, contracts, and the light of dawn." },
-                  { "id": 17, "image_url": "", "name": "Sraosha", "alias": "Soroush", "persian_script": "سروش", "gender": "Male", "meaning": "Obedience / Hearkening", "role": "Messenger of God; protects the soul for three days after death.", "guardian_of": "Prayer and the hearing of the divine word." },
-                  { "id": 18, "image_url": "", "name": "Rashnu", "alias": "Rashn", "persian_script": "رشن", "gender": "Male", "meaning": "Justice", "role": "The impartial judge who weighs the deeds of the souls.", "guardian_of": "Truth and justice (The Scales)." },
-                  { "id": 19, "image_url": "", "name": "Fravashis", "alias": "Farvardin", "persian_script": "فروردین", "gender": "Neutral/Plural", "meaning": "Guardian Spirits", "role": "The pre-existing souls of all living beings; they sustain the sky and earth.", "guardian_of": "Ancestors and the unborn." },
-                  { "id": 20, "image_url": "", "name": "Verethragna", "alias": "Bahram", "persian_script": "بهرام", "gender": "Male", "meaning": "Victory", "role": "The warrior god who grants triumph over evil; appears in 10 forms.", "guardian_of": "Victory and travelers." },
-                  { "id": 21, "image_url": "", "name": "Raman", "alias": "Ram", "persian_script": "رام", "gender": "Male", "meaning": "Peace / Joy", "role": "Associated with Vayu (Wind); brings the breath of life and tranquility.", "guardian_of": "Joy, peace, and the atmosphere." },
-                  { "id": 22, "image_url": "", "name": "Vata", "alias": "Govad / Bad", "persian_script": "باد / گوات", "gender": "Male", "meaning": "Wind", "role": "The physical wind that brings rain and moves the waters.", "guardian_of": "The wind and air." },
-                  { "id": 23, "image_url": "", "name": "Daepadin", "alias": "Day-be-Din", "persian_script": "دی‌به‌دین", "gender": "N/A (Aspect of the Creator)", "meaning": "Creator's Day (before Religion)", "role": "Represents the Creator preceding the day of Religion.", "guardian_of": "Spiritual choice." },
-                  { "id": 24, "image_url": "", "name": "Daena", "alias": "Din", "persian_script": "دین", "gender": "Female", "meaning": "Religion / Conscience", "role": "The personification of the inner self and religious insight.", "guardian_of": "The conscience and the Holy Religion." },
-                  { "id": 25, "image_url": "", "name": "Ashi Vanguhi", "alias": "Ard", "persian_script": "ارد", "gender": "Female", "meaning": "Good Reward / Blessing", "role": "Distributes the rewards of good deeds; associated with wealth.", "guardian_of": "Fortune and rewards." },
-                  { "id": 26, "image_url": "", "name": "Arshtat", "alias": "Ashtad", "persian_script": "اشتاد", "gender": "Female", "meaning": "Rectitude / Justice", "role": "Keeps the world in motion through truth; guide of the world.", "guardian_of": "Honesty and physical stability." },
-                  { "id": 27, "image_url": "", "name": "Asman", "alias": "Asman", "persian_script": "آسمان", "gender": "Male", "meaning": "Sky", "role": "The firmament that protects the earth.", "guardian_of": "The sky and the celestial sphere." },
-                  { "id": 28, "image_url": "", "name": "Zam", "alias": "Zamyad", "persian_script": "زامیاد", "gender": "Female", "meaning": "Earth / Land", "role": "Represents the physical land and the spirit of the earth's geography.", "guardian_of": "The land and soil." },
-                  { "id": 29, "image_url": "", "name": "Manthra Spenta", "alias": "Mahraspand", "persian_script": "ماراسپند", "gender": "Male", "meaning": "Holy Word", "role": "The power of the spoken prayer that defeats evil.", "guardian_of": "Holy texts and prayers." },
-                  { "id": 30, "image_url": "", "name": "Anaghra Raocha", "alias": "Aneran", "persian_script": "انارام", "gender": "Neutral", "meaning": "Endless Light", "role": "Represents the station of God and the infinite light of paradise.", "guardian_of": "Illumination and the highest heaven." }
-                ]
-              },
-              {
-                "category_name": "Extra-Calendar & Conceptual",
-                "description": "These entities are invoked in specific prayers, Yashts, or as companions (Hamkars) to the main calendar deities.",
-                "entities": [
-                  { "id": 31, "image_url": "", "name": "Apam Napat", "alias": "Borz / Barz-Izad", "persian_script": "برز‌ ایزد", "gender": "Male", "meaning": "Grandson of Waters", "role": "A great Ahuric divinity; shares the title 'Ahura'. Protector of the Glory.", "guardian_of": "Deep waters and sovereignty." },
-                  { "id": 32, "image_url": "", "name": "Haoma", "alias": "Hom", "persian_script": "هوم", "gender": "Male", "meaning": "The Pressed One", "role": "The priest of the Yazatas; represents health, strength, and ecstasy.", "guardian_of": "The Haoma plant and healing rituals." },
-                  { "id": 33, "image_url": "", "name": "Drvaspa", "alias": "Darvasp", "persian_script": "درواسپ", "gender": "Female", "meaning": "Mistress of Healthy Horses", "role": "Protector of herds and domestic animals.", "guardian_of": "Horses and livestock health." },
-                  { "id": 34, "image_url": "", "name": "Vanant", "alias": "Vanant", "persian_script": "ونند", "gender": "Male", "meaning": "The Conqueror (Star Vega)", "role": "Guardian of the West; assists Tishtrya in battling evil.", "guardian_of": "The Western horizon." },
-                  { "id": 35, "image_url": "", "name": "Satavaesa", "alias": "Satavay", "persian_script": "سدویس", "gender": "Male", "meaning": "The Hundred-Servants", "role": "Guardian of the South; distributes rain water.", "guardian_of": "The Southern horizon and rain distribution." },
-                  { "id": 36, "image_url": "", "name": "Haptoiranga", "alias": "Haftorang", "persian_script": "هفت‌اورنگ", "gender": "Male", "meaning": "Seven Signs (Big Dipper)", "role": "Guardian of the North; commander of stars against demonic planets.", "guardian_of": "The Northern horizon." },
-                  { "id": 37, "image_url": "", "name": "Chista", "alias": "Chist", "persian_script": "چیستا", "gender": "Female", "meaning": "Insight / Knowledge", "role": "Guide of the path; associated with Daena (Religion).", "guardian_of": "Wisdom and clear vision." },
-                  { "id": 38, "image_url": "", "name": "Parendi", "alias": "Parend", "persian_script": "پرند", "gender": "Female", "meaning": "Abundance / Plenitude", "role": "Companion of Ashi; brings wealth and activity.", "guardian_of": "Hidden treasures and prosperity." },
-                  { "id": 39, "image_url": "", "name": "Nairyosangha", "alias": "Narsang", "persian_script": "نریوسنگ", "gender": "Male", "meaning": "Manly Utterance", "role": "Divine messenger; lights the fire of Kings.", "guardian_of": "The link between men and gods (fire)." },
-                  { "id": 40, "image_url": "", "name": "Airyaman", "alias": "Erman", "persian_script": "آریامن", "gender": "Male", "meaning": "Friendship", "role": "The Yazata of healing and marriage; invoked for cures.", "guardian_of": "Healing, marriage, and social bonds." },
-                  { "id": 41, "image_url": "", "name": "Dahman Afrin", "alias": "Dahm", "persian_script": "دهم", "gender": "Male/Neutral", "meaning": "Prayer", "role": "Personification of the prayers of the congregation.", "guardian_of": "The power of communal worship." },
-                  { "id": 42, "image_url": "", "name": "Burz", "alias": "Burz", "persian_script": "برز", "gender": "Female/Male aspects", "meaning": "Exalted / High", "role": "The divinity of agriculture and water.", "guardian_of": "Crops and fertility." },
-                  { "id": 43, "image_url": "", "name": "Ushah", "alias": "Ushbami", "persian_script": "اوش‌بام", "gender": "Female", "meaning": "Dawn", "role": "The goddess of dawn; drives away the demons of night.", "guardian_of": "The morning light and intellect." },
-                  { "id": 44, "image_url": "", "name": "Zrebar", "alias": "Zare", "persian_script": "زره", "gender": "N/A (Abstract)", "meaning": "Ocean / Sea", "role": "Often personified in relation to the mythic Vourukasha sea.", "guardian_of": "The mythical source of all waters." },
-                  { "id": 45, "image_url": "", "name": "Thwasha", "alias": "Thwasha", "persian_script": "ثواشا / توشه", "gender": "Male", "meaning": "Space / Firmament", "role": "The infinite space in which the luminaries move.", "guardian_of": "The atmosphere." },
-                  { "id": 46, "image_url": "", "name": "Zurvan", "alias": "Zaman", "persian_script": "زمان", "gender": "Male/Neutral", "meaning": "Time", "role": "The boundless time in which Ahura Mazda creates.", "guardian_of": "Destiny and cycles." },
-                  { "id": 47, "image_url": "", "name": "Akhshti", "alias": "Ashti", "persian_script": "آشتی", "gender": "Female", "meaning": "Peace", "role": "Companion of Vohu Manah; opposes discord.", "guardian_of": "Peace and reconciliation." },
-                  { "id": 48, "image_url": "", "name": "Hamvareti", "alias": "Ham-vereti", "persian_script": "همورتی", "gender": "Female", "meaning": "Courage / Valor", "role": "Often invoked alongside Vanant and Verethragna.", "guardian_of": "Bravery in defense." },
-                  { "id": 49, "image_url": "", "name": "Iza", "alias": "Izeh", "persian_script": "ایزه", "gender": "Female", "meaning": "Zeal / Devotion", "role": "Represents the religious zeal of the worshiper.", "guardian_of": "Sacrifice and religious fervor." },
-                  { "id": 50, "image_url": "", "name": "Khvarenah", "alias": "Farr / Farrah", "persian_script": "فر / فره", "gender": "Neutral", "meaning": "Divine Glory", "role": "The divine luminous energy that legitimizes kings and prophets.", "guardian_of": "Royal authority and destiny." }
-                ]
-              }
-            ]
-          }
+          "zoroastrian_yazatas": [
+            {
+              "category": "The Amesha Spentas (The Bounteous Immortals)",
+              "description": "The highest order of divinity.",
+              "entities": [
+                {
+                  "image_url": "/yazatas/images/Bahman.jpg",
+                  "name_avestan": "Vohu Manah",
+                  "alias_persian": "Bahman",
+                  "complete_meaning": "Good Mind / Good Purpose",
+                  "persian_script": "بهمن",
+                  "gender": "Male",
+                  "role": "Representative of God; welcomes souls.",
+                  "guardian_of": "Cattle / Animals"
+                },
+                {
+                  "image_url": "/yazatas/images/Ordibehesht.jpg",
+                  "name_avestan": "Asha Vahishta",
+                  "alias_persian": "Ordibehesht",
+                  "complete_meaning": "Best Truth / Righteousness",
+                  "persian_script": "اردیبهشت",
+                  "gender": "Male",
+                  "role": "Maintains cosmic order; opposes chaos.",
+                  "guardian_of": "Fire"
+                },
+                {
+                  "image_url": "/yazatas/images/Shahrivar.jpg",
+                  "name_avestan": "Khshathra Vairya",
+                  "alias_persian": "Shahrivar",
+                  "complete_meaning": "Desirable Dominion",
+                  "persian_script": "شهریور",
+                  "gender": "Male",
+                  "role": "Represents divine power and protection.",
+                  "guardian_of": "Metals / The Sky"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Spenta Armaiti",
+                  "alias_persian": "Esfand",
+                  "complete_meaning": "Holy Devotion",
+                  "persian_script": "اسفند / سپندارمذ",
+                  "gender": "Female",
+                  "role": "Represents submission and devotion.",
+                  "guardian_of": "The Earth"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Haurvatat",
+                  "alias_persian": "Khordad",
+                  "complete_meaning": "Wholeness / Perfection",
+                  "persian_script": "خرداد",
+                  "gender": "Female",
+                  "role": "Represents physical and spiritual integrity.",
+                  "guardian_of": "Water"
+                },
+                {
+                  "image_url": "/yazatas/images/Amordad.jpg",
+                  "name_avestan": "Ameretat",
+                  "alias_persian": "Amurdad",
+                  "complete_meaning": "Immortality",
+                  "persian_script": "امرداد",
+                  "gender": "Female",
+                  "role": "Represents eternal life.",
+                  "guardian_of": "Plants"
+                }
+              ]
+            },
+            {
+              "category": "Yazatas of Nature and the Elements",
+              "description": "Personifications of the physical world.",
+              "entities": [
+                {
+                  "image_url": "/yazatas/images/Khorshid.jpg",
+                  "name_avestan": "Hvar Khshaeta",
+                  "alias_persian": "Khorshed",
+                  "complete_meaning": "The Radiant Sun",
+                  "persian_script": "خورشید",
+                  "gender": "Male",
+                  "role": "The eye of Ahura Mazda; purifier.",
+                  "guardian_of": "The Sun"
+                },
+                {
+                  "image_url": "/yazatas/images/Mah.jpg",
+                  "name_avestan": "Mah",
+                  "alias_persian": "Mah",
+                  "complete_meaning": "The Moon",
+                  "persian_script": "ماه",
+                  "gender": "Male",
+                  "role": "Controls tides and plant growth.",
+                  "guardian_of": "The Moon / Seed"
+                },
+                {
+                  "image_url": "/yazatas/images/Tir.jpg",
+                  "name_avestan": "Tishtrya",
+                  "alias_persian": "Tir",
+                  "complete_meaning": "Sirius / The Archer",
+                  "persian_script": "تیر",
+                  "gender": "Male",
+                  "role": "Bringer of rain; battles drought.",
+                  "guardian_of": "Rain / Stars"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Aredvi Sura Anahita",
+                  "alias_persian": "Aban",
+                  "complete_meaning": "The Undefiled / Humid",
+                  "persian_script": "آبان / آناهیتا",
+                  "gender": "Female",
+                  "role": "Divinity of fertility and healing.",
+                  "guardian_of": "Waters"
+                },
+                {
+                  "image_url": "/yazatas/images/Azar.jpg",
+                  "name_avestan": "Atar",
+                  "alias_persian": "Adar",
+                  "complete_meaning": "Fire",
+                  "persian_script": "آذر",
+                  "gender": "Male",
+                  "role": "The visible son of God; ritual medium.",
+                  "guardian_of": "All Fire"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Vata",
+                  "alias_persian": "Govad / Bad",
+                  "complete_meaning": "Wind",
+                  "persian_script": "باد / گوا",
+                  "gender": "Male",
+                  "role": "Brings rain clouds; breath of life.",
+                  "guardian_of": "Wind / Atmosphere"
+                },
+                {
+                  "image_url": "/yazatas/images/Zam.jpg",
+                  "name_avestan": "Zam",
+                  "alias_persian": "Zamyad",
+                  "complete_meaning": "Earth",
+                  "persian_script": "زامیاد",
+                  "gender": "Female",
+                  "role": "Genius of the earth and mountains.",
+                  "guardian_of": "Land / Soil"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Asman",
+                  "alias_persian": "Asman",
+                  "complete_meaning": "The Sky",
+                  "persian_script": "آسمان",
+                  "gender": "Male",
+                  "role": "The crystalline dome protecting earth.",
+                  "guardian_of": "The Firmament"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Thwasha",
+                  "alias_persian": "Faza",
+                  "complete_meaning": "Space / Void",
+                  "persian_script": "فضا / ثواشا",
+                  "gender": "Male",
+                  "role": "The atmosphere where planets move.",
+                  "guardian_of": "Cosmic Space"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Ushah",
+                  "alias_persian": "Sepideh",
+                  "complete_meaning": "The Dawn",
+                  "persian_script": "سپیده / اوشه",
+                  "gender": "Female",
+                  "role": "Goddess of natural dawn light.",
+                  "guardian_of": "Early Morning"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Gairis",
+                  "alias_persian": "Kuh",
+                  "complete_meaning": "The Mountains",
+                  "persian_script": "کوه / گئریس",
+                  "gender": "Male",
+                  "role": "Collective divinity of mountains.",
+                  "guardian_of": "Mountains"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Vourukasha",
+                  "alias_persian": "Frakhvkart",
+                  "complete_meaning": "Wide-Gulfed",
+                  "persian_script": "فراخ‌کرت",
+                  "gender": "Male",
+                  "role": "The Heavenly Sea.",
+                  "guardian_of": "The Ocean"
+                }
+              ]
+            },
+            {
+              "category": "Yazatas of Time and Cycles (The Gahs)",
+              "description": "Divinities governing the flow of time and liturgical watches.",
+              "entities": [
+                {
+                  "image_url": "",
+                  "name_avestan": "Zurvan",
+                  "alias_persian": "Zaman",
+                  "complete_meaning": "Time",
+                  "persian_script": "زروان / زمان",
+                  "gender": "Male",
+                  "role": "Controls the flow of destiny.",
+                  "guardian_of": "Infinite Time"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Saredha",
+                  "alias_persian": "Sal",
+                  "complete_meaning": "The Year",
+                  "persian_script": "سرذ",
+                  "gender": "Male",
+                  "role": "Presides over the annual cycle.",
+                  "guardian_of": "The Solar Year"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Havana",
+                  "alias_persian": "Havan",
+                  "complete_meaning": "The Mortar / Morning",
+                  "persian_script": "هاون",
+                  "gender": "Male",
+                  "role": "Lord of the Morning (Sunrise to Noon).",
+                  "guardian_of": "Morning Watch"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Rapithwin",
+                  "alias_persian": "Rapithwin",
+                  "complete_meaning": "Midday",
+                  "persian_script": "رپیتون",
+                  "gender": "Male",
+                  "role": "Lord of Noon (Noon to 3pm).",
+                  "guardian_of": "Summer Watch"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Borz",
+                  "alias_persian": "Borz",
+                  "complete_meaning": "The Exalted",
+                  "persian_script": "برز",
+                  "gender": "Male",
+                  "role": "Lord of Afternoon (3pm to Sunset).",
+                  "guardian_of": "Uziran Watch"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Aiwisruthrema",
+                  "alias_persian": "Aiwisruthrem",
+                  "complete_meaning": "Life-Furthering",
+                  "persian_script": "ایویسروثریم",
+                  "gender": "Male",
+                  "role": "Lord of Evening (Sunset to Midnight).",
+                  "guardian_of": "Evening Watch"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Ushahin",
+                  "alias_persian": "Ushahin",
+                  "complete_meaning": "Increasing Light",
+                  "persian_script": "اوشهین",
+                  "gender": "Male",
+                  "role": "Lord of Night (Midnight to Dawn).",
+                  "guardian_of": "Night Watch"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Asnya",
+                  "alias_persian": "Asnya",
+                  "complete_meaning": "Of the Day",
+                  "persian_script": "اسنیه",
+                  "gender": "Male",
+                  "role": "Collective Lords of the 5 watches.",
+                  "guardian_of": "24h Cycle"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Antare-Mah",
+                  "alias_persian": "Inter-Moon",
+                  "complete_meaning": "Between the Moon (New Moon)",
+                  "persian_script": "اندرماه",
+                  "gender": "Male",
+                  "role": "Presides over the renewal phase.",
+                  "guardian_of": "The New Moon"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Mahya",
+                  "alias_persian": "Mahya",
+                  "complete_meaning": "Monthly / Of the Moon",
+                  "persian_script": "ماهیه",
+                  "gender": "Male",
+                  "role": "Associated with the full moon.",
+                  "guardian_of": "The Full Moon"
+                }
+              ]
+            },
+            {
+              "category": "Yazatas of Moral and Divine Concepts",
+              "description": "Abstract virtues worshiped as living spirits.",
+              "entities": [
+                {
+                  "image_url": "/yazatas/images/Mehr.jpg",
+                  "name_avestan": "Mithra",
+                  "alias_persian": "Mehr",
+                  "complete_meaning": "Covenant / Contract",
+                  "persian_script": "مهر",
+                  "gender": "Male",
+                  "role": "Judge of souls; protector of oaths.",
+                  "guardian_of": "Light / Contracts"
+                },
+                {
+                  "image_url": "/yazatas/images/Soroush.jpg",
+                  "name_avestan": "Sraosha",
+                  "alias_persian": "Soroush",
+                  "complete_meaning": "Obedience / Inspiration",
+                  "persian_script": "سروش",
+                  "gender": "Male",
+                  "role": "Messenger of God; protects at night.",
+                  "guardian_of": "Prayer / Sleep"
+                },
+                {
+                  "image_url": "/yazatas/images/Rashnu.jpg",
+                  "name_avestan": "Rashnu",
+                  "alias_persian": "Rashn",
+                  "complete_meaning": "Justice",
+                  "persian_script": "رشن",
+                  "gender": "Male",
+                  "role": "Holds the scales of justice.",
+                  "guardian_of": "Impartial Justice"
+                },
+                {
+                  "image_url": "/yazatas/images/Bahram.jpg",
+                  "name_avestan": "Verethragna",
+                  "alias_persian": "Bahram",
+                  "complete_meaning": "Victory",
+                  "persian_script": "بهرام",
+                  "gender": "Male",
+                  "role": "Divinity of victory in battle.",
+                  "guardian_of": "Victory"
+                },
+                {
+                  "image_url": "/yazatas/images/Ashi.jpg",
+                  "name_avestan": "Ashi Vanghuhi",
+                  "alias_persian": "Ashi / Ard",
+                  "complete_meaning": "Good Reward / Blessing",
+                  "persian_script": "ارد / اشی",
+                  "gender": "Female",
+                  "role": "Distributor of blessings.",
+                  "guardian_of": "Fortune"
+                },
+                {
+                  "image_url": "/yazatas/images/Din.jpg",
+                  "name_avestan": "Daena",
+                  "alias_persian": "Din",
+                  "complete_meaning": "Religion / Conscience",
+                  "persian_script": "دین",
+                  "gender": "Female",
+                  "role": "Personification of the inner self.",
+                  "guardian_of": "Conscience"
+                },
+                {
+                  "image_url": "/yazatas/images/Arshtat.jpg",
+                  "name_avestan": "Arshtat",
+                  "alias_persian": "Ashtad",
+                  "complete_meaning": "Rectitude",
+                  "persian_script": "اشتاد",
+                  "gender": "Female",
+                  "role": "Guides the world through truth.",
+                  "guardian_of": "Truthfulness"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Merezdika",
+                  "alias_persian": "Morzhdik",
+                  "complete_meaning": "Mercy / Compassion",
+                  "persian_script": "مرژدیک",
+                  "gender": "Male",
+                  "role": "The divinity of forgiveness.",
+                  "guardian_of": "Compassion"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Ada",
+                  "alias_persian": "Ada",
+                  "complete_meaning": "Allocation / Reward",
+                  "persian_script": "آدا",
+                  "gender": "Female",
+                  "role": "Specific reward for a ritual.",
+                  "guardian_of": "Spiritual Pay"
+                },
+                {
+                  "image_url": "/yazatas/images/Rata.jpg",
+                  "name_avestan": "Rata",
+                  "alias_persian": "Rad",
+                  "complete_meaning": "Charity / Gift",
+                  "persian_script": "راتا / راد",
+                  "gender": "Female",
+                  "role": "Divinity of gracious giving.",
+                  "guardian_of": "Charity"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Tushnamaiti",
+                  "alias_persian": "Khamoshi",
+                  "complete_meaning": "Silent Meditation",
+                  "persian_script": "توشنامیتى",
+                  "gender": "Female",
+                  "role": "Discipline of the mind.",
+                  "guardian_of": "Meditation"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Rasanstat",
+                  "alias_persian": "Rast",
+                  "complete_meaning": "Truthfulness / Rightness",
+                  "persian_script": "رسستات",
+                  "gender": "Female",
+                  "role": "Being true to one's word.",
+                  "guardian_of": "Honesty in Action"
+                },
+                {
+                  "image_url": "/yazatas/images/Erethe.jpg",
+                  "name_avestan": "Erethe",
+                  "alias_persian": "Ereth",
+                  "complete_meaning": "Rectitude (Energy)",
+                  "persian_script": "ارثه",
+                  "gender": "Female",
+                  "role": "Ensures good energy is not wasted.",
+                  "guardian_of": "Truth in Thought"
+                },
+                {
+                  "image_url": "/yazatas/images/Chista.jpg",
+                  "name_avestan": "Chista",
+                  "alias_persian": "Chista",
+                  "complete_meaning": "Knowledge",
+                  "persian_script": "چیستا",
+                  "gender": "Female",
+                  "role": "Divinity of wisdom and the path.",
+                  "guardian_of": "Knowledge"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Frashasti",
+                  "alias_persian": "Frashast",
+                  "complete_meaning": "Fame / Teaching",
+                  "persian_script": "فرشاتى",
+                  "gender": "Female",
+                  "role": "Good reputation and instruction.",
+                  "guardian_of": "Education"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Paurvatat",
+                  "alias_persian": "Paurvatat",
+                  "complete_meaning": "Priority / Pre-eminence",
+                  "persian_script": "پئوروتات",
+                  "gender": "Female",
+                  "role": "Concept of leading or being first.",
+                  "guardian_of": "Leadership"
+                }
+              ]
+            },
+            {
+              "category": "Yazatas of Protection, Healing, and Soul",
+              "description": "Guardians of life, health, and the spirit.",
+              "entities": [
+                {
+                  "image_url": "",
+                  "name_avestan": "Fravashi",
+                  "alias_persian": "Farvardin",
+                  "complete_meaning": "Guardian Spirit",
+                  "persian_script": "فروردین",
+                  "gender": "Neutral",
+                  "role": "Divine essence existing eternally.",
+                  "guardian_of": "Souls"
+                },
+                {
+                  "image_url": "/yazatas/images/Hom.jpg",
+                  "name_avestan": "Haoma",
+                  "alias_persian": "Hom",
+                  "complete_meaning": "Sacred Elixir",
+                  "persian_script": "هوم",
+                  "gender": "Male",
+                  "role": "Priest of Yazatas; bestows strength.",
+                  "guardian_of": "Healing / Haoma"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Airyaman",
+                  "alias_persian": "Aryaman",
+                  "complete_meaning": "Friendship",
+                  "persian_script": "اریامن",
+                  "gender": "Male",
+                  "role": "Divinity of social bonds and healing.",
+                  "guardian_of": "Marriage / Health"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Druvatat",
+                  "alias_persian": "Druvatat",
+                  "complete_meaning": "Soundness / Health",
+                  "persian_script": "دروتات",
+                  "gender": "Female",
+                  "role": "Focuses on physical soundness.",
+                  "guardian_of": "Physical Integrity"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Thrita",
+                  "alias_persian": "Thrit",
+                  "complete_meaning": "The Third One",
+                  "persian_script": "تریتا",
+                  "gender": "Male",
+                  "role": "The First Healer; patron of surgery.",
+                  "guardian_of": "Medicine"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Manthra Spenta",
+                  "alias_persian": "Mahraspand",
+                  "complete_meaning": "Holy Word",
+                  "persian_script": "ماراسپند",
+                  "gender": "Male",
+                  "role": "Power of holy prayers.",
+                  "guardian_of": "Scripture"
+                },
+                {
+                  "image_url": "/yazatas/images/DahmaAfriti.jpg",
+                  "name_avestan": "Dahma Afriti",
+                  "alias_persian": "Dahm",
+                  "complete_meaning": "Pious Benediction",
+                  "persian_script": "دهم",
+                  "gender": "Female",
+                  "role": "Personification of blessing.",
+                  "guardian_of": "Prayer Effects"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Saoka",
+                  "alias_persian": "Sook",
+                  "complete_meaning": "Prosperity",
+                  "persian_script": "سوک",
+                  "gender": "Female",
+                  "role": "Personification of benefit.",
+                  "guardian_of": "Profit"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Parendi",
+                  "alias_persian": "Parand",
+                  "complete_meaning": "Abundance",
+                  "persian_script": "پارند",
+                  "gender": "Female",
+                  "role": "Bringer of riches; companion of Ashi.",
+                  "guardian_of": "Treasure"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Anaghra Raocha",
+                  "alias_persian": "Aneran",
+                  "complete_meaning": "Endless Light",
+                  "persian_script": "انیران",
+                  "gender": "Neutral",
+                  "role": "Station of Ahura Mazda.",
+                  "guardian_of": "Highest Heaven"
+                }
+              ]
+            },
+            {
+              "category": "Liturgical and Social Lords (Ratus)",
+              "description": "Spiritual judges of social units and rituals.",
+              "entities": [
+                {
+                  "image_url": "",
+                  "name_avestan": "Ratu-Berezit",
+                  "alias_persian": "Ratu-Borz",
+                  "complete_meaning": "The High Master",
+                  "persian_script": "رتوبرزیت",
+                  "gender": "Male",
+                  "role": "Spiritual title of officiating priest.",
+                  "guardian_of": "Ritual Authority"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Nmanya",
+                  "alias_persian": "Nmanya",
+                  "complete_meaning": "Lord of the House",
+                  "persian_script": "نمانیا",
+                  "gender": "Male",
+                  "role": "Judge of the family unit.",
+                  "guardian_of": "The Home"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Visya",
+                  "alias_persian": "Visya",
+                  "complete_meaning": "Lord of the Village",
+                  "persian_script": "ویسیا",
+                  "gender": "Male",
+                  "role": "Judge of the community.",
+                  "guardian_of": "The Village"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Zantuma",
+                  "alias_persian": "Zantuma",
+                  "complete_meaning": "Lord of the District",
+                  "persian_script": "زنتوما",
+                  "gender": "Male",
+                  "role": "Judge of the wider region.",
+                  "guardian_of": "The District"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Dakhyuma",
+                  "alias_persian": "Dakhyuma",
+                  "complete_meaning": "Lord of the Country",
+                  "persian_script": "دخیومه",
+                  "gender": "Male",
+                  "role": "Judge of the nation.",
+                  "guardian_of": "The Nation"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Dahyu",
+                  "alias_persian": "Dahyu",
+                  "complete_meaning": "The Land / Country",
+                  "persian_script": "دهیو",
+                  "gender": "Female",
+                  "role": "Spiritual essence of the land.",
+                  "guardian_of": "National Soil"
+                }
+              ]
+            },
+            {
+              "category": "Spiritual Forces and War",
+              "description": "Active forces that accompany the great Yazatas.",
+              "entities": [
+                {
+                  "image_url": "/yazatas/images/Far.jpg",
+                  "name_avestan": "Kavyam Hvarenah",
+                  "alias_persian": "Farr / Farrah",
+                  "complete_meaning": "Divine Glory",
+                  "persian_script": "فر / فر کیانی",
+                  "gender": "Neutral",
+                  "role": "Luminous force of legitimacy.",
+                  "guardian_of": "Kingship"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Nairya Hamvareti",
+                  "alias_persian": "Nairy-Hamvar",
+                  "complete_meaning": "Manly Courage",
+                  "persian_script": "هامورتن",
+                  "gender": "Female",
+                  "role": "Divinity of standing firm.",
+                  "guardian_of": "Valor / Defense"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Ama",
+                  "alias_persian": "Ama",
+                  "complete_meaning": "Strength / Power",
+                  "persian_script": "اما",
+                  "gender": "Male",
+                  "role": "The force/stamina of victory.",
+                  "guardian_of": "Physical Strength"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Damoish Upamana",
+                  "alias_persian": "Dami-Upaman",
+                  "complete_meaning": "The Anathema / Assistant",
+                  "persian_script": "اوپه نیا",
+                  "gender": "Male",
+                  "role": "Warrior; aggressive authority.",
+                  "guardian_of": "Retribution"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Vizidar Deheshn",
+                  "alias_persian": "Vizidar",
+                  "complete_meaning": "Discerner of Creation",
+                  "persian_script": "ویزیدار دهشن",
+                  "gender": "Male",
+                  "role": "Discerns good from evil.",
+                  "guardian_of": "Judgment"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Akhshti",
+                  "alias_persian": "Ashti",
+                  "complete_meaning": "Peace",
+                  "persian_script": "آشتی",
+                  "gender": "Female",
+                  "role": "Ending conflict; treaties.",
+                  "guardian_of": "Peace Treaties"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Arshti",
+                  "alias_persian": "Arshti",
+                  "complete_meaning": "The Spear",
+                  "persian_script": "آرشتی",
+                  "gender": "Female",
+                  "role": "Divinity of the thrown weapon/flight.",
+                  "guardian_of": "Speed / Weaponry"
+                }
+              ]
+            },
+            {
+              "category": "Yazatas of Agriculture and Growth",
+              "description": "Guardians of food, animals, and prosperity.",
+              "entities": [
+                {
+                  "image_url": "/yazatas/images/Gosh.jpg",
+                  "name_avestan": "Geush Urvan",
+                  "alias_persian": "Gosh",
+                  "complete_meaning": "Soul of the Cow",
+                  "persian_script": "گوش",
+                  "gender": "Female",
+                  "role": "Welfare of animals and oppressed.",
+                  "guardian_of": "Livestock"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Geush Tashan",
+                  "alias_persian": "Gosh-Tarash",
+                  "complete_meaning": "Fashioner of the Cow",
+                  "persian_script": "گوش‌تراش",
+                  "gender": "Male",
+                  "role": "Architect of animal forms.",
+                  "guardian_of": "Animal Anatomy"
+                },
+                {
+                  "image_url": "/yazatas/images/Raman.jpg",
+                  "name_avestan": "Rama Hvastra",
+                  "alias_persian": "Ram",
+                  "complete_meaning": "Peace / Good Pasture",
+                  "persian_script": "رام",
+                  "gender": "Male",
+                  "role": "Joy of life and peace.",
+                  "guardian_of": "Joy / Pastures"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Berejya",
+                  "alias_persian": "Berjis",
+                  "complete_meaning": "Bringer of Growth",
+                  "persian_script": "برجیا",
+                  "gender": "Male",
+                  "role": "Protector of grain and corn.",
+                  "guardian_of": "Crops"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Drvaspa",
+                  "alias_persian": "Darvasp",
+                  "complete_meaning": "Mistress of Horses",
+                  "persian_script": "درواسپ",
+                  "gender": "Female",
+                  "role": "Protector of cattle health.",
+                  "guardian_of": "Animal Health"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Hadish",
+                  "alias_persian": "Hadish",
+                  "complete_meaning": "The Homestead",
+                  "persian_script": "هادیش",
+                  "gender": "Male",
+                  "role": "Protector of the home structure.",
+                  "guardian_of": "Family Dwellings"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Savanghi",
+                  "alias_persian": "Savang",
+                  "complete_meaning": "Life-giving",
+                  "persian_script": "سونگ",
+                  "gender": "Male",
+                  "role": "Executes animal protection.",
+                  "guardian_of": "Animal Herds"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Fradat-Fshu",
+                  "alias_persian": "Fradat-Fshu",
+                  "complete_meaning": "Increaser of Cattle",
+                  "persian_script": "فرادات-فشو",
+                  "gender": "Male",
+                  "role": "Multiplies livestock.",
+                  "guardian_of": "Breeding"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Fradat-Vira",
+                  "alias_persian": "Fradat-Vira",
+                  "complete_meaning": "Increaser of Men",
+                  "persian_script": "فرادات-ویرا",
+                  "gender": "Male",
+                  "role": "Presides over population strength.",
+                  "guardian_of": "Human Population"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Fradat-Vispam",
+                  "alias_persian": "Hujyaiti",
+                  "complete_meaning": "Increaser of Good Life",
+                  "persian_script": "هوجیاتى",
+                  "gender": "Male",
+                  "role": "Responsible for flourishing.",
+                  "guardian_of": "Standard of Living"
+                }
+              ]
+            },
+            {
+              "category": "The Star Yazatas",
+              "description": "Generals of the Sky and Constellations.",
+              "entities": [
+                {
+                  "image_url": "",
+                  "name_avestan": "Vanant",
+                  "alias_persian": "Vanant",
+                  "complete_meaning": "The Conqueror",
+                  "persian_script": "ونند",
+                  "gender": "Male",
+                  "role": "General of the South.",
+                  "guardian_of": "Southern Sky"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Satavaesa",
+                  "alias_persian": "Sataves",
+                  "complete_meaning": "Hundred-Servants",
+                  "persian_script": "ستاویس",
+                  "gender": "Male",
+                  "role": "General of the West.",
+                  "guardian_of": "Western Sky"
+                },
+                {
+                  "image_url": "/yazatas/images/Haftorang.jpg",
+                  "name_avestan": "Haptoring",
+                  "alias_persian": "Haftowrang",
+                  "complete_meaning": "Seven Signs",
+                  "persian_script": "هفت‌اورنگ",
+                  "gender": "Male",
+                  "role": "General of the North.",
+                  "guardian_of": "Northern Sky"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Bamya",
+                  "alias_persian": "Bam",
+                  "complete_meaning": "Radiance",
+                  "persian_script": "بامیا",
+                  "gender": "Female",
+                  "role": "Illuminates mountaintops.",
+                  "guardian_of": "First Light"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Paoiryaenis",
+                  "alias_persian": "Paoirya",
+                  "complete_meaning": "The First Ones",
+                  "persian_script": "پئوریینیس",
+                  "gender": "Male",
+                  "role": "Brings rain and fertility.",
+                  "guardian_of": "The Pleiades"
+                },
+                {
+                  "image_url": "/yazatas/images/Parvin.jpg",
+                  "name_avestan": "Paurwanya",
+                  "alias_persian": "Parvin",
+                  "complete_meaning": "The Leading One",
+                  "persian_script": "پروین",
+                  "gender": "Male",
+                  "role": "A distinct herald star.",
+                  "guardian_of": "Uncertain Identity"
+                }
+              ]
+            },
+            {
+              "category": "The Great Fires & Messengers",
+              "description": "Living spiritual entities.",
+              "entities": [
+                {
+                  "image_url": "",
+                  "name_avestan": "Adur Farnbag",
+                  "alias_persian": "Farnbagh",
+                  "complete_meaning": "Fire of Glory",
+                  "persian_script": "آذر فرنبغ",
+                  "gender": "Male",
+                  "role": "Protector of clergy/knowledge.",
+                  "guardian_of": "Priests"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Adur Gushnasp",
+                  "alias_persian": "Goshnasp",
+                  "complete_meaning": "Fire of the Stallion",
+                  "persian_script": "آذر گشنسب",
+                  "gender": "Male",
+                  "role": "Protector of warriors/kings.",
+                  "guardian_of": "Warriors"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Adur Burzen-Mihr",
+                  "alias_persian": "Barzin-Mehr",
+                  "complete_meaning": "Fire of Mithra",
+                  "persian_script": "آذر برزین‌مهر",
+                  "gender": "Male",
+                  "role": "Protector of agriculture.",
+                  "guardian_of": "Farmers"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Apam Napat",
+                  "alias_persian": "Apam Napat",
+                  "complete_meaning": "Child of the Waters",
+                  "persian_script": "آپام نپات",
+                  "gender": "Male",
+                  "role": "Associate of Borz; ancient sovereign.",
+                  "guardian_of": "Deep Waters"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Nairyosangha",
+                  "alias_persian": "Naryosang",
+                  "complete_meaning": "Manly Utterance",
+                  "persian_script": "نریوسنگ",
+                  "gender": "Male",
+                  "role": "Messenger bringing fire.",
+                  "guardian_of": "Divine Messages"
+                },
+                {
+                  "image_url": "",
+                  "name_avestan": "Vayu",
+                  "alias_persian": "Vay",
+                  "complete_meaning": "The Void / Atmosphere",
+                  "persian_script": "وای",
+                  "gender": "Male",
+                  "role": "God of space between earth/sky.",
+                  "guardian_of": "Breath of Life"
+                }
+              ]
+            }
+          ]
         };
 
         // --- 2. State & Setup ---
@@ -246,13 +1125,20 @@
         const itemsPerPage = 9;
         
         let allEntities = [];
-        const categories = rawData.zoroastrian_yazatas.categories;
+        const categories = rawData.zoroastrian_yazatas;
         
+        let globalIdCounter = 1;
+
         categories.forEach(cat => {
             cat.entities.forEach(ent => {
+                // Logic updated: No automatic URL generation rules.
+                // We rely strictly on the 'image_url' field provided in the JSON data.
+                
                 allEntities.push({
                     ...ent,
-                    categoryRef: cat.category_name
+                    id: globalIdCounter++,
+                    categoryRef: cat.category,
+                    suppress_image: ent.name_avestan === "Ahura Mazda"
                 });
             });
         });
@@ -260,9 +1146,9 @@
         // --- 3. UI Helpers ---
 
         function getGenderTheme(gender) {
-            const g = gender.toLowerCase();
+            const g = (gender || "").toLowerCase();
             
-            if (g.includes('plural')) {
+            if (g.includes('plural') || g.includes('neutral')) {
                 return {
                     borderClass: 'border-gradient-plural',
                     badgeBg: 'bg-purple-50',
@@ -318,17 +1204,25 @@
             // Category Buttons
             categories.forEach(cat => {
                 const btn = document.createElement('button');
-                btn.dataset.cat = cat.category_name;
-                const isActive = currentCategory === cat.category_name;
-                // Shorten name logic
-                let displayName = cat.category_name;
-                if(displayName.includes('Creator')) displayName = 'Amesha Spentas';
-                if(displayName.includes('Calendar')) displayName = 'Calendar';
-                if(displayName.includes('Extra')) displayName = 'Concepts';
+                btn.dataset.cat = cat.category;
+                const isActive = currentCategory === cat.category;
+                
+                // Shorten name logic for display tabs
+                let displayName = cat.category;
+                if(displayName.includes('Amesha Spentas')) displayName = 'Amesha Spentas';
+                if(displayName.includes('Nature')) displayName = 'Nature';
+                if(displayName.includes('Time')) displayName = 'Time/Gahs';
+                if(displayName.includes('Moral')) displayName = 'Concepts';
+                if(displayName.includes('Protection')) displayName = 'Protection';
+                if(displayName.includes('Liturgical')) displayName = 'Social';
+                if(displayName.includes('Spiritual Forces')) displayName = 'Forces';
+                if(displayName.includes('Agriculture')) displayName = 'Agriculture';
+                if(displayName.includes('Star')) displayName = 'Stars';
+                if(displayName.includes('Great Fires')) displayName = 'Fires';
 
                 btn.className = `px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 whitespace-nowrap font-cinzel ${isActive ? 'bg-persian-gold text-white shadow-md' : 'bg-transparent text-gray-500 hover:bg-gray-100'}`;
                 btn.textContent = displayName;
-                btn.onclick = () => setCategory(cat.category_name);
+                btn.onclick = () => setCategory(cat.category);
                 container.appendChild(btn);
             });
         }
@@ -365,7 +1259,7 @@
                 return;
             }
             
-            const catData = categories.find(c => c.category_name === currentCategory);
+            const catData = categories.find(c => c.category === currentCategory);
             if (catData && catData.description) {
                 descText.textContent = catData.description;
                 descBox.classList.remove('hidden');
@@ -380,9 +1274,9 @@
             if (searchQuery) {
                 const lowerQ = searchQuery.toLowerCase();
                 data = data.filter(e => 
-                    e.name.toLowerCase().includes(lowerQ) ||
-                    e.alias.toLowerCase().includes(lowerQ) ||
-                    e.meaning.toLowerCase().includes(lowerQ) ||
+                    e.name_avestan.toLowerCase().includes(lowerQ) ||
+                    e.alias_persian.toLowerCase().includes(lowerQ) ||
+                    e.complete_meaning.toLowerCase().includes(lowerQ) ||
                     e.role.toLowerCase().includes(lowerQ) ||
                     e.guardian_of.toLowerCase().includes(lowerQ)
                 );
@@ -398,7 +1292,7 @@
             
             if (!entity.suppress_image) {
                 const innerContent = entity.image_url 
-                    ? `<img src="${entity.image_url}" alt="${entity.name}" class="w-full h-full object-cover">`
+                    ? `<img src="${entity.image_url}" alt="${entity.name_avestan}" class="w-full h-full object-cover">`
                     : `<div class="w-full h-full flex flex-col items-center justify-center text-stone-300 bg-stone-50">
                             <i class="fa-solid fa-image text-2xl mb-2 opacity-50"></i>
                             <span class="text-[10px] font-cinzel uppercase tracking-widest opacity-50">Image Pending</span>
@@ -426,8 +1320,8 @@
                             <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider mb-3 border ${theme.badgeBg} ${theme.badgeText} ${theme.badgeBorder}">
                                 <i class="fa-solid ${theme.icon}"></i> ${entity.gender.split(' ')[0]}
                             </span>
-                            <h3 class="text-2xl font-cinzel font-bold text-gray-800 leading-none mb-1">${entity.name}</h3>
-                            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">${entity.alias}</p>
+                            <h3 class="text-2xl font-cinzel font-bold text-gray-800 leading-none mb-1">${entity.name_avestan}</h3>
+                            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">${entity.alias_persian}</p>
                         </div>
                         <!-- Persian Script -->
                         <div class="text-2xl font-persian text-gray-400 group-hover:text-persian-gold transition-colors duration-300" dir="rtl">
@@ -437,7 +1331,7 @@
                     
                     <!-- Meaning -->
                     <div class="mb-5">
-                        <p class="text-lg font-serif italic text-gray-600">"${entity.meaning}"</p>
+                        <p class="text-lg font-serif italic text-gray-600">"${entity.complete_meaning}"</p>
                         <div class="w-12 h-0.5 bg-amber-200 mt-3 rounded-full"></div>
                     </div>
 
