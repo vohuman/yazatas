@@ -1311,6 +1311,9 @@
             
             if (!entity.suppress_image) {
                 let innerContent = '';
+                
+                // Specific override for Dahman Afrin to handle taller image
+                const heightClass = entity.name_avestan === 'Dahman Afrin' ? 'h-64' : 'h-40';
 
                 // Check for Array (Swap Feature)
                 if (Array.isArray(entity.image_url) && entity.image_url.length > 1) {
@@ -1334,7 +1337,7 @@
                            </div>`;
                 }
                 
-                imageSectionHtml = `<div class="w-full h-40 mb-5 bg-stone-50 rounded-xl border border-stone-100 overflow-hidden relative group-hover:shadow-md transition-shadow">
+                imageSectionHtml = `<div class="w-full ${heightClass} mb-5 bg-stone-50 rounded-xl border border-stone-100 overflow-hidden relative group-hover:shadow-md transition-shadow">
                         ${innerContent}
                     </div>`;
             }
