@@ -1312,8 +1312,8 @@
             if (!entity.suppress_image) {
                 let innerContent = '';
                 
-                // Specific override for Dahman Afrin to handle taller image
-                const heightClass = entity.name_avestan === 'Dahman Afrin' ? 'h-64' : 'h-40';
+                // Specific override for Dahman Afrin and Fravashi to handle taller/wider images
+                const heightClass = (entity.name_avestan === 'Dahman Afrin' || entity.name_avestan === 'Fravashi') ? 'h-64' : 'h-40';
 
                 // Check for Array (Swap Feature)
                 if (Array.isArray(entity.image_url) && entity.image_url.length > 1) {
