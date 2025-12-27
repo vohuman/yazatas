@@ -359,6 +359,24 @@
 
         // --- 4. Logic Functions ---
 
+        // Video Handlers
+        function playVideo(container) {
+            const video = container.querySelector('video');
+            if (video) {
+                video.style.opacity = '1';
+                video.play().catch(e => console.log('Autoplay blocked:', e));
+            }
+        }
+
+        function stopVideo(container) {
+            const video = container.querySelector('video');
+            if (video) {
+                video.style.opacity = '0';
+                video.pause();
+                video.currentTime = 0;
+            }
+        }
+
         function setCategory(catName) {
             currentCategory = catName;
             currentPage = 1;
@@ -416,6 +434,8 @@
 
         function renderCard(entity) {
             const theme = getGenderTheme(entity.gender);
+            // Check for non-empty video URL
+            const hasVideo = entity.video_url && entity.video_url.trim().length > 0;
             
             // Image Logic
             let imageSectionHtml = '';
@@ -426,10 +446,10 @@
                 // Specific override for Dahman Afrin and Fravashi to handle taller/wider images
                 const heightClass = (entity.name_avestan === 'Dahman Afrin' || entity.name_avestan === 'Fravashi') ? 'h-64' : 'h-40';
 
-                // Check for Array (Swap Feature)
+                // Base Image Content
                 if (Array.isArray(entity.image_url) && entity.image_url.length > 1) {
                      innerContent = `
-                        <div class="relative w-full h-full group/image">
+                        <div class="relative w-full h-full group/image z-10">
                             <!-- Bottom Image (Revealed on Hover) -->
                             <img src="${entity.image_url[1]}" alt="${entity.name_avestan} Alternate" class="absolute inset-0 w-full h-full object-cover">
                             <!-- Top Image (Hidden on Hover) -->
@@ -441,15 +461,44 @@
                     const imgSrc = Array.isArray(entity.image_url) ? entity.image_url[0] : entity.image_url;
                     
                     innerContent = imgSrc 
-                        ? `<img src="${imgSrc}" alt="${entity.name_avestan}" class="w-full h-full object-cover">`
-                        : `<div class="w-full h-full flex flex-col items-center justify-center text-stone-300 bg-stone-50">
+                        ? `<img src="${imgSrc}" alt="${entity.name_avestan}" class="w-full h-full object-cover relative z-10 block">`
+                        : `<div class="w-full h-full flex flex-col items-center justify-center text-stone-300 bg-stone-50 relative z-10">
                                 <i class="fa-solid fa-image text-2xl mb-2 opacity-50"></i>
                                 <span class="text-[10px] font-cinzel uppercase tracking-widest opacity-50">Image Pending</span>
                            </div>`;
                 }
+
+                // Video Logic
+                let videoOverlay = '';
+                let containerProps = '';
+                let indicator = '';
+
+                if (hasVideo) {
+                    // Visual Indicator
+                    indicator = `
+                        <div class="absolute top-2 right-2 z-30 bg-black/60 backdrop-blur-md rounded-full w-6 h-6 flex items-center justify-center border border-white/20 shadow-lg pointer-events-none">
+                            <i class="fa-solid fa-play text-[8px] text-white ml-0.5"></i>
+                        </div>
+                    `;
+                    
+                    // Video Element - Force opacity 0, Z-50 (top), black bg
+                    videoOverlay = `
+                        <video 
+                            src="${entity.video_url}" 
+                            class="absolute inset-0 w-full h-full object-cover z-50 opacity-0 transition-opacity duration-300 bg-black pointer-events-none" 
+                            muted loop playsinline preload="auto">
+                        </video>
+                    `;
+                    
+                    // Add listeners to wrapper
+                    containerProps = `onmouseenter="playVideo(this)" onmouseleave="stopVideo(this)"`;
+                }
                 
-                imageSectionHtml = `<div class="w-full ${heightClass} mb-5 bg-stone-50 rounded-xl border border-stone-100 overflow-hidden relative group-hover:shadow-md transition-shadow">
+                imageSectionHtml = `
+                    <div class="w-full ${heightClass} mb-5 bg-stone-50 rounded-xl border border-stone-100 overflow-hidden relative group-hover:shadow-md transition-shadow" ${containerProps}>
                         ${innerContent}
+                        ${videoOverlay}
+                        ${indicator}
                     </div>`;
             }
             
@@ -589,4 +638,3 @@
     </script>
 </body>
 </html>
-
