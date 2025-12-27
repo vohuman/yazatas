@@ -482,11 +482,13 @@
                     `;
                     
                     // Video Element - Force opacity 0, Z-50 (top), black bg
+                    // Added onended event to hide video when finished
                     videoOverlay = `
                         <video 
                             src="${entity.video_url}" 
                             class="absolute inset-0 w-full h-full object-cover z-50 opacity-0 transition-opacity duration-300 bg-black pointer-events-none" 
-                             playsinline preload="auto">
+                             playsinline preload="auto"
+                             onended="this.style.opacity='0'">
                         </video>
                     `;
                     
