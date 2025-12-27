@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&family=Noto+Naskh+Arabic:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Cinzel, Lato, and Vazirmatn (for Persian) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -18,7 +18,7 @@
                     fontFamily: {
                         'cinzel': ['Cinzel', 'serif'],
                         'lato': ['Lato', 'sans-serif'],
-                        'persian': ['Noto Naskh Arabic', 'serif'],
+                        'persian': ['Vazirmatn', 'sans-serif'], // Switched to Vazirmatn
                     },
                     colors: {
                         'persian-gold': '#D4AF37',
@@ -56,6 +56,14 @@
         .border-gradient-female { background: linear-gradient(to right, #fb7185, #e11d48); }
         .border-gradient-neutral { background: linear-gradient(to right, #fbbf24, #d97706); }
         .border-gradient-plural { background: linear-gradient(to right, #c084fc, #9333ea); }
+
+        /* Tooltip Logic */
+        .tooltip-container:hover .tooltip-content,
+        .tooltip-container:focus-within .tooltip-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="font-lato text-gray-700 min-h-screen flex flex-col antialiased">
@@ -75,16 +83,31 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-5">
                 
-                <!-- Brand -->
-                <div class="flex items-center gap-4 group cursor-default">
-                    <div class="relative">
+                <!-- Brand & Tooltip -->
+                <div class="flex items-center gap-4 group cursor-default w-full md:w-auto justify-center md:justify-start">
+                    <div class="relative flex-shrink-0">
                         <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-amber-300 to-orange-400 opacity-30 blur group-hover:opacity-50 transition duration-500"></div>
                         <div class="relative w-12 h-12 bg-white rounded-full flex items-center justify-center border border-amber-100 shadow-sm">
                             <i class="fa-solid fa-fire text-amber-600 text-xl"></i>
                         </div>
                     </div>
-                    <div>
-                        <h1 style="cursor:pointer;" class="text-2xl font-cinzel font-bold text-gray-800 tracking-wide uppercase" title="In the Zoroastrian religion, the Yazatas (Avestan for 'worthy of worship' or 'venerable beings') are a group of divine beings or angels created by Ahura Mazda (the supreme creator god) to help maintain world order (asha) and fight against the forces of evil led by Angra Mainyu (Ahriman).">Yazatas</h1>
+                    
+                    <div class="relative">
+                        <div class="flex items-baseline gap-2">
+                            <h1 class="text-2xl font-cinzel font-bold text-gray-800 tracking-wide uppercase">Yazatas</h1>
+                            
+                            <!-- Custom Tooltip Trigger -->
+                            <div class="tooltip-container relative inline-block group/tooltip" tabindex="0">
+                                <i class="fa-solid fa-circle-info text-amber-400/80 hover:text-amber-600 cursor-help text-sm transition-colors"></i>
+                                
+                                <!-- Tooltip Content -->
+                                <div class="tooltip-content absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-full mt-3 w-72 md:w-96 p-4 bg-gray-900 text-stone-200 text-xs leading-relaxed rounded-xl shadow-2xl border border-gray-700 opacity-0 invisible transform -translate-y-2 transition-all duration-300 z-50 pointer-events-none group-hover/tooltip:pointer-events-auto">
+                                    <div class="absolute -top-1.5 left-1/2 md:left-4 -translate-x-1/2 w-3 h-3 bg-gray-900 border-l border-t border-gray-700 transform rotate-45"></div>
+                                    <p class="font-serif italic text-amber-500 mb-1">Definition:</p>
+                                    In the Zoroastrian religion, the <span class="text-white font-bold">Yazatas</span> (Avestan for 'worthy of worship' or 'venerable beings') are a group of divine beings created by Ahura Mazda to help maintain world order (Asha) and fight against the forces of evil.
+                                </div>
+                            </div>
+                        </div>
                         <p class="text-[10px] text-amber-700 font-bold uppercase tracking-[0.2em]">Zoroastrian Divinity</p>
                     </div>
                 </div>
@@ -635,7 +658,7 @@
                   "gender": "Female",
                   "role": "Concept of leading or being first.",
                   "guardian_of": "Leadership"
-                }
+                },
               ]
             },
             {
@@ -1362,8 +1385,8 @@
                             <h3 class="text-2xl font-cinzel font-bold text-gray-800 leading-none mb-1">${entity.name_avestan}</h3>
                             <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">${entity.alias_persian}</p>
                         </div>
-                        <!-- Persian Script -->
-                        <div class="text-2xl font-persian text-gray-400 group-hover:text-persian-gold transition-colors duration-300" dir="rtl">
+                        <!-- Persian Script with Golden Hover Glow -->
+                        <div class="text-2xl font-persian text-gray-400 group-hover:text-persian-gold transition-all duration-500 group-hover:[text-shadow:0_0_10px_#D4AF37,0_0_20px_rgba(212,175,55,0.4)] cursor-default" dir="rtl">
                             ${entity.persian_script}
                         </div>
                     </div>
