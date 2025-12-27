@@ -12,7 +12,8 @@
           "persian_script": "بهمن",
           "gender": "Male",
           "role": "Representative of God; welcomes souls.",
-          "guardian_of": "Cattle / Animals"
+          "guardian_of": "Cattle / Animals",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Ordibehesht.jpg",
@@ -22,7 +23,8 @@
           "persian_script": "اردیبهشت",
           "gender": "Male",
           "role": "Maintains cosmic order; opposes chaos.",
-          "guardian_of": "Fire"
+          "guardian_of": "Fire",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Shahrivar.jpg",
@@ -32,7 +34,8 @@
           "persian_script": "شهریور",
           "gender": "Male",
           "role": "Represents divine power and protection.",
-          "guardian_of": "Metals / The Sky"
+          "guardian_of": "Metals / The Sky",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Esfand.jpg",
@@ -42,7 +45,8 @@
           "persian_script": "اسفند / سپندارمذ",
           "gender": "Female",
           "role": "Represents submission and devotion.",
-          "guardian_of": "The Earth"
+          "guardian_of": "The Earth",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Khordad.jpg",
@@ -52,7 +56,8 @@
           "persian_script": "خرداد",
           "gender": "Female",
           "role": "Represents physical and spiritual integrity.",
-          "guardian_of": "Water"
+          "guardian_of": "Water",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Amordad.jpg",
@@ -62,7 +67,8 @@
           "persian_script": "امرداد",
           "gender": "Female",
           "role": "Represents eternal life.",
-          "guardian_of": "Plants"
+          "guardian_of": "Plants",
+          "video_url": ""
         }
       ]
     },
@@ -78,7 +84,8 @@
           "persian_script": "خورشید",
           "gender": "Male",
           "role": "The eye of Ahura Mazda; purifier.",
-          "guardian_of": "The Sun"
+          "guardian_of": "The Sun",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Mah.jpg",
@@ -88,7 +95,8 @@
           "persian_script": "ماه",
           "gender": "Male",
           "role": "Controls tides and plant growth.",
-          "guardian_of": "The Moon / Seed"
+          "guardian_of": "The Moon / Seed",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Tir.jpg",
@@ -98,7 +106,8 @@
           "persian_script": "تیر",
           "gender": "Male",
           "role": "Bringer of rain; battles drought.",
-          "guardian_of": "Rain / Stars"
+          "guardian_of": "Rain / Stars",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Aban.jpg",
@@ -108,7 +117,8 @@
           "persian_script": "آبان / ناهید",
           "gender": "Female",
           "role": "Divinity of fertility and healing.",
-          "guardian_of": "Waters"
+          "guardian_of": "Waters",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Azar.jpg",
@@ -118,7 +128,8 @@
           "persian_script": "آذر",
           "gender": "Male",
           "role": "The visible son of God; ritual medium.",
-          "guardian_of": "All Fire"
+          "guardian_of": "All Fire",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Vata.jpg",
@@ -128,7 +139,8 @@
           "persian_script": "باد / گوا",
           "gender": "Male",
           "role": "Brings rain clouds; breath of life.",
-          "guardian_of": "Wind / Atmosphere"
+          "guardian_of": "Wind / Atmosphere",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Zam.jpg",
@@ -138,7 +150,8 @@
           "persian_script": "زامیاد",
           "gender": "Female",
           "role": "Genius of the earth and mountains.",
-          "guardian_of": "Land / Soil"
+          "guardian_of": "Land / Soil",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Asman.jpg",
@@ -148,7 +161,8 @@
           "persian_script": "آسمان",
           "gender": "Male",
           "role": "The crystalline dome protecting earth.",
-          "guardian_of": "The Firmament"
+          "guardian_of": "The Firmament",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Thousha.jpg",
@@ -158,7 +172,8 @@
           "persian_script": "فضا / ثواشا / توشه",
           "gender": "Male",
           "role": "The atmosphere where planets move.",
-          "guardian_of": "Cosmic Space"
+          "guardian_of": "Cosmic Space",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Ushah.jpg",
@@ -168,7 +183,8 @@
           "persian_script": "سپیده / اوشه",
           "gender": "Female",
           "role": "Goddess of natural dawn light.",
-          "guardian_of": "Early Morning"
+          "guardian_of": "Early Morning",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Kuh.jpg",
@@ -178,7 +194,8 @@
           "persian_script": "کوه / گئریس",
           "gender": "Male",
           "role": "Collective divinity of mountains.",
-          "guardian_of": "Mountains"
+          "guardian_of": "Mountains",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Vourukasha.jpg",
@@ -188,7 +205,8 @@
           "persian_script": "فراخ‌کرت",
           "gender": "Male",
           "role": "The Heavenly Sea.",
-          "guardian_of": "The Ocean"
+          "guardian_of": "The Ocean",
+          "video_url": ""
         }
       ]
     },
@@ -204,7 +222,8 @@
           "persian_script": "زروان / زمان",
           "gender": "Male",
           "role": "Personification of 'Boundless Time'.",
-          "guardian_of": "Infinite Time"
+          "guardian_of": "Infinite Time",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Saredha.jpg",
@@ -214,7 +233,8 @@
           "persian_script": "سرذ",
           "gender": "Male",
           "role": "Presides over the annual cycle.",
-          "guardian_of": "The Solar Year"
+          "guardian_of": "The Solar Year",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Havan.jpg",
@@ -224,7 +244,8 @@
           "persian_script": "هاون",
           "gender": "Male",
           "role": "Yazata of the Morning (Sunrise to Noon).",
-          "guardian_of": "Morning (Sunrise to Noon) Watch"
+          "guardian_of": "Morning (Sunrise to Noon) Watch",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Rapithwin.jpg",
@@ -234,7 +255,8 @@
           "persian_script": "رپیتون",
           "gender": "Male",
           "role": "Spirit of noon and summer warmth; retreats underground in winter.",
-          "guardian_of": "Noon (Noon to 3 PM) / Summer Heat"
+          "guardian_of": "Noon (Noon to 3 PM) / Summer Heat",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Uzerin.jpg",
@@ -244,7 +266,8 @@
           "persian_script": "اوزیرن",
           "gender": "Male",
           "role": "Presides over the working hours of the late afternoon.",
-          "guardian_of": "Guardian of the Afternoon (3 PM to Sunset); associated with teaching, studying, and the protection of herds."
+          "guardian_of": "Guardian of the Afternoon (3 PM to Sunset); associated with teaching, studying, and the protection of herds.",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Aiwisruthrem.jpg",
@@ -254,7 +277,8 @@
           "persian_script": "ایویسروثریم",
           "gender": "Male",
           "role": "Presides over the first half of the night; preparation for sleep.",
-          "guardian_of": "Evening (Sunset to Midnight) Watch"
+          "guardian_of": "Evening (Sunset to Midnight) Watch",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Ushahin.jpg",
@@ -264,7 +288,8 @@
           "persian_script": "اوشهین",
           "gender": "Male",
           "role": "Presides over the first half of the night; preparation for sleepe 5 watches.",
-          "guardian_of": "Midnight to Dawn"
+          "guardian_of": "Midnight to Dawn",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Antare.jpg",
@@ -274,7 +299,8 @@
           "persian_script": "اندرماه / ماه نو",
           "gender": "Male",
           "role": "Presides over the renewal phase.",
-          "guardian_of": "The New Moon"
+          "guardian_of": "The New Moon",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Pereno.jpg",
@@ -284,7 +310,8 @@
           "persian_script": "پرنو ماه / ماه پر",
           "gender": "Male",
           "role": "Transition from new moon with the full moon.",
-          "guardian_of": "Life and animals, especially the primordial bull, Gavaevodata."
+          "guardian_of": "Life and animals, especially the primordial bull, Gavaevodata.",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Visaptatha.jpg",
@@ -294,7 +321,8 @@
           "persian_script": "ویشپتاتا ماه",
           "gender": "Male",
           "role": "Ensuring the steady progression of time and the continuity of the lunar cycle. He represents the wisdom of transition.",
-          "guardian_of": "The orderly decline and transition of that power back toward the new moon. Plants and animals, seeds of bull."
+          "guardian_of": "The orderly decline and transition of that power back toward the new moon. Plants and animals, seeds of bull.",
+          "video_url": ""
         }
       ]
     },
@@ -310,7 +338,8 @@
           "persian_script": "مهر",
           "gender": "Male",
           "role": "Judge of souls; protector of oaths.",
-          "guardian_of": "Light / Contracts"
+          "guardian_of": "Light / Contracts",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Soroush.jpg",
@@ -320,7 +349,8 @@
           "persian_script": "سروش",
           "gender": "Male",
           "role": "Messenger of God; protects at night.",
-          "guardian_of": "Prayer / Sleep"
+          "guardian_of": "Prayer / Sleep",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Rashnu.jpg",
@@ -330,7 +360,8 @@
           "persian_script": "رشن",
           "gender": "Male",
           "role": "Holds the scales of justice.",
-          "guardian_of": "Impartial Justice"
+          "guardian_of": "Impartial Justice",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Bahram.jpg",
@@ -340,7 +371,8 @@
           "persian_script": "بهرام",
           "gender": "Male",
           "role": "Divinity of victory in battle.",
-          "guardian_of": "Victory"
+          "guardian_of": "Victory",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Ashi.jpg",
@@ -350,7 +382,8 @@
           "persian_script": "ارد / اشی",
           "gender": "Female",
           "role": "Distributor of blessings.",
-          "guardian_of": "Fortune"
+          "guardian_of": "Fortune",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Din.jpg",
@@ -360,7 +393,8 @@
           "persian_script": "دین",
           "gender": "Female",
           "role": "Personification of the inner self.",
-          "guardian_of": "Conscience"
+          "guardian_of": "Conscience",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Arshtat.jpg",
@@ -370,7 +404,8 @@
           "persian_script": "اشتاد",
           "gender": "Female",
           "role": "Guides the world through truth.",
-          "guardian_of": "Truthfulness"
+          "guardian_of": "Truthfulness",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Marzhdik.jpg",
@@ -380,7 +415,8 @@
           "persian_script": "مرژدیک",
           "gender": "Male",
           "role": "The divinity of forgiveness.",
-          "guardian_of": "Compassion"
+          "guardian_of": "Compassion",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Ada.jpg",
@@ -390,7 +426,8 @@
           "persian_script": "آدا",
           "gender": "Female",
           "role": "Specific reward for a ritual.",
-          "guardian_of": "Spiritual Pay"
+          "guardian_of": "Spiritual Pay",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Rata.jpg",
@@ -400,7 +437,8 @@
           "persian_script": "راتا / راد",
           "gender": "Female",
           "role": "Divinity of gracious giving.",
-          "guardian_of": "Charity"
+          "guardian_of": "Charity",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Tushnamaiti.jpg",
@@ -410,7 +448,8 @@
           "persian_script": "توشنامیتى",
           "gender": "Female",
           "role": "Discipline of the mind.",
-          "guardian_of": "Meditation"
+          "guardian_of": "Meditation",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Rasanstat.jpg",
@@ -420,7 +459,8 @@
           "persian_script": "راست",
           "gender": "Female",
           "role": "Being true to one's word.",
-          "guardian_of": "Honesty in Action"
+          "guardian_of": "Honesty in Action",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Erethe.jpg",
@@ -430,7 +470,8 @@
           "persian_script": "ارثه",
           "gender": "Female",
           "role": "Ensures good energy is not wasted.",
-          "guardian_of": "Truth in Thought"
+          "guardian_of": "Truth in Thought",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Chista.jpg",
@@ -440,7 +481,8 @@
           "persian_script": "چیستا",
           "gender": "Female",
           "role": "Divinity of wisdom and the path.",
-          "guardian_of": "Knowledge"
+          "guardian_of": "Knowledge",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Frashasti.jpg",
@@ -450,7 +492,8 @@
           "persian_script": "فرشاتى",
           "gender": "Female",
           "role": "Good reputation and instruction.",
-          "guardian_of": "Education"
+          "guardian_of": "Education",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Paurvatat.jpg",
@@ -460,7 +503,8 @@
           "persian_script": "پئوروتات",
           "gender": "Female",
           "role": "Concept of leading or being first.",
-          "guardian_of": "Leadership"
+          "guardian_of": "Leadership",
+          "video_url": ""
         }
       ]
     },
@@ -476,7 +520,8 @@
           "persian_script": "فروردین",
           "gender": "Neutral",
           "role": "Divine essence existing eternally.",
-          "guardian_of": "Souls"
+          "guardian_of": "Souls",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Hom.jpg",
@@ -486,7 +531,8 @@
           "persian_script": "هوم",
           "gender": "Male",
           "role": "Priest of Yazatas; bestows strength.",
-          "guardian_of": "Healing / Haoma"
+          "guardian_of": "Healing / Haoma",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Airyaman.jpg",
@@ -496,7 +542,8 @@
           "persian_script": "آریامن",
           "gender": "Male",
           "role": "Divinity of social bonds and healing.",
-          "guardian_of": "Marriage / Health"
+          "guardian_of": "Marriage / Health",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Druvatat.jpg",
@@ -506,7 +553,8 @@
           "persian_script": "دروتات",
           "gender": "Female",
           "role": "Focuses on physical soundness.",
-          "guardian_of": "Physical Integrity"
+          "guardian_of": "Physical Integrity",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Thrita.jpg",
@@ -516,7 +564,8 @@
           "persian_script": "تریتا",
           "gender": "Male",
           "role": "The First Healer; patron of surgery.",
-          "guardian_of": "Medicine"
+          "guardian_of": "Medicine",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/ManthraSpenta.jpg",
@@ -526,7 +575,8 @@
           "persian_script": "ماراسپند",
           "gender": "Male",
           "role": "Power of holy prayers.",
-          "guardian_of": "Scripture"
+          "guardian_of": "Scripture",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/DahmaAfriti.jpg",
@@ -536,7 +586,8 @@
           "persian_script": "دهم",
           "gender": "Female",
           "role": "Personification of blessing.",
-          "guardian_of": "Prayer Effects"
+          "guardian_of": "Prayer Effects",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Sook.jpg",
@@ -546,7 +597,8 @@
           "persian_script": "سوک",
           "gender": "Female",
           "role": "Personification of benefit.",
-          "guardian_of": "Profit"
+          "guardian_of": "Profit",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Parand.jpg",
@@ -556,7 +608,8 @@
           "persian_script": "پرند",
           "gender": "Female",
           "role": "Bringer of riches; companion of Ashi.",
-          "guardian_of": "Treasure"
+          "guardian_of": "Treasure",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/DahmanAfrin.jpg",
@@ -566,7 +619,8 @@
           "persian_script": "دهمان‌ آفرین",
           "gender": "Male",
           "role": "Personification of blessing.",
-          "guardian_of": "Prayer Effects"
+          "guardian_of": "Prayer Effects",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -576,7 +630,8 @@
           "persian_script": "انیران",
           "gender": "Neutral",
           "role": "Station of Ahura Mazda.",
-          "guardian_of": "Highest Heaven"
+          "guardian_of": "Highest Heaven",
+          "video_url": ""
         }
       ]
     },
@@ -592,7 +647,8 @@
           "persian_script": "رتوبرزیت",
           "gender": "Male",
           "role": "Spiritual title of officiating priest.",
-          "guardian_of": "Ritual Authority"
+          "guardian_of": "Ritual Authority",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Nmanya.jpg",
@@ -602,7 +658,8 @@
           "persian_script": "نمانیا",
           "gender": "Male",
           "role": "Judge of the family unit.",
-          "guardian_of": "The Home"
+          "guardian_of": "The Home",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Visya.jpg",
@@ -612,7 +669,8 @@
           "persian_script": "ویسیا",
           "gender": "Male",
           "role": "Judge of the community.",
-          "guardian_of": "The Village"
+          "guardian_of": "The Village",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Zantuma.jpg",
@@ -622,7 +680,8 @@
           "persian_script": "زنتوما",
           "gender": "Male",
           "role": "Judge of the wider region.",
-          "guardian_of": "The District"
+          "guardian_of": "The District",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -632,7 +691,8 @@
           "persian_script": "دخیومه",
           "gender": "Male",
           "role": "Judge of the nation.",
-          "guardian_of": "The Nation"
+          "guardian_of": "The Nation",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -642,7 +702,8 @@
           "persian_script": "دهیو",
           "gender": "Female",
           "role": "Spiritual essence of the land.",
-          "guardian_of": "National Soil"
+          "guardian_of": "National Soil",
+          "video_url": ""
         }
       ]
     },
@@ -658,7 +719,8 @@
           "persian_script": "فر / فر کیانی",
           "gender": "Neutral",
           "role": "Luminous force of legitimacy.",
-          "guardian_of": "Kingship"
+          "guardian_of": "Kingship",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -668,7 +730,8 @@
           "persian_script": "هامورتن",
           "gender": "Female",
           "role": "Divinity of standing firm.",
-          "guardian_of": "Valor / Defense"
+          "guardian_of": "Valor / Defense",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -678,7 +741,8 @@
           "persian_script": "آما",
           "gender": "Male",
           "role": "The force/stamina of victory.",
-          "guardian_of": "Physical Strength"
+          "guardian_of": "Physical Strength",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -688,7 +752,8 @@
           "persian_script": "اوپه نیا",
           "gender": "Male",
           "role": "Warrior; aggressive authority.",
-          "guardian_of": "Retribution"
+          "guardian_of": "Retribution",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Vizidar.jpg",
@@ -698,7 +763,8 @@
           "persian_script": "ویزیدار دهشن",
           "gender": "Male",
           "role": "Discerns good from evil.",
-          "guardian_of": "Judgment"
+          "guardian_of": "Judgment",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Ashti.jpg",
@@ -708,7 +774,8 @@
           "persian_script": "آشتی",
           "gender": "Female",
           "role": "Ending conflict; treaties.",
-          "guardian_of": "Peace Treaties"
+          "guardian_of": "Peace Treaties",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -718,7 +785,8 @@
           "persian_script": "آرشتی",
           "gender": "Female",
           "role": "Divinity of the thrown weapon/flight.",
-          "guardian_of": "Speed / Weaponry"
+          "guardian_of": "Speed / Weaponry",
+          "video_url": ""
         }
       ]
     },
@@ -734,7 +802,8 @@
           "persian_script": "گوش",
           "gender": "Female",
           "role": "Welfare of animals and oppressed.",
-          "guardian_of": "Livestock"
+          "guardian_of": "Livestock",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -744,7 +813,8 @@
           "persian_script": "گوش‌تراش",
           "gender": "Male",
           "role": "Architect of animal forms.",
-          "guardian_of": "Animal Anatomy"
+          "guardian_of": "Animal Anatomy",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Raman.jpg",
@@ -754,7 +824,8 @@
           "persian_script": "رام",
           "gender": "Male",
           "role": "Joy of life and peace.",
-          "guardian_of": "Joy / Pastures"
+          "guardian_of": "Joy / Pastures",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -764,7 +835,8 @@
           "persian_script": "برجیا",
           "gender": "Male",
           "role": "Protector of grain and corn.",
-          "guardian_of": "Crops"
+          "guardian_of": "Crops",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Drvaspa.jpg",
@@ -774,7 +846,8 @@
           "persian_script": "درواسپ",
           "gender": "Female",
           "role": "Protector of cattle health.",
-          "guardian_of": "Animal Health"
+          "guardian_of": "Animal Health",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -784,7 +857,8 @@
           "persian_script": "هادیش",
           "gender": "Male",
           "role": "Protector of the home structure.",
-          "guardian_of": "Family Dwellings"
+          "guardian_of": "Family Dwellings",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -794,7 +868,8 @@
           "persian_script": "سونگ",
           "gender": "Male",
           "role": "Executes animal protection.",
-          "guardian_of": "Animal Herds"
+          "guardian_of": "Animal Herds",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -804,7 +879,8 @@
           "persian_script": "فرادات-فشو",
           "gender": "Male",
           "role": "Multiplies livestock.",
-          "guardian_of": "Breeding"
+          "guardian_of": "Breeding",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -814,7 +890,8 @@
           "persian_script": "فرادات-ویرا",
           "gender": "Male",
           "role": "Presides over population strength.",
-          "guardian_of": "Human Population"
+          "guardian_of": "Human Population",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -824,7 +901,8 @@
           "persian_script": "هوجیاتى",
           "gender": "Male",
           "role": "Responsible for flourishing.",
-          "guardian_of": "Standard of Living"
+          "guardian_of": "Standard of Living",
+          "video_url": ""
         }
       ]
     },
@@ -840,7 +918,8 @@
           "persian_script": "ونند",
           "gender": "Male",
           "role": "General of the South.",
-          "guardian_of": "Southern Sky"
+          "guardian_of": "Southern Sky",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -850,7 +929,8 @@
           "persian_script": "ستاویس",
           "gender": "Male",
           "role": "General of the West.",
-          "guardian_of": "Western Sky"
+          "guardian_of": "Western Sky",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Haftorang.jpg",
@@ -860,7 +940,8 @@
           "persian_script": "هفت‌اورنگ",
           "gender": "Male",
           "role": "General of the North.",
-          "guardian_of": "Northern Sky"
+          "guardian_of": "Northern Sky",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -870,7 +951,8 @@
           "persian_script": "بامیا",
           "gender": "Female",
           "role": "Illuminates mountaintops.",
-          "guardian_of": "First Light"
+          "guardian_of": "First Light",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -880,7 +962,8 @@
           "persian_script": "پئوریینیس",
           "gender": "Male",
           "role": "Brings rain and fertility.",
-          "guardian_of": "The Pleiades"
+          "guardian_of": "The Pleiades",
+          "video_url": ""
         },
         {
           "image_url": [
@@ -893,7 +976,8 @@
           "persian_script": "پروین / پرویز",
           "gender": "Male",
           "role": "A distinct herald star.",
-          "guardian_of": "Stars"
+          "guardian_of": "Stars",
+          "video_url": ""
         }
       ]
     },
@@ -909,7 +993,8 @@
           "persian_script": "آذر فرنبغ",
           "gender": "Male",
           "role": "Protector of clergy/knowledge.",
-          "guardian_of": "Priests"
+          "guardian_of": "Priests",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -919,7 +1004,8 @@
           "persian_script": "آذر گشنسب",
           "gender": "Male",
           "role": "Protector of warriors/kings.",
-          "guardian_of": "Warriors"
+          "guardian_of": "Warriors",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -929,7 +1015,8 @@
           "persian_script": "آذر برزین‌مهر",
           "gender": "Male",
           "role": "Protector of agriculture.",
-          "guardian_of": "Farmers"
+          "guardian_of": "Farmers",
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/ApamNapat.jpg",
@@ -939,7 +1026,8 @@
           "persian_script": "آپام نپات",
           "gender": "Male",
           "role": "Associate of Borz; ancient sovereign.",
-          "guardian_of": "Deep Waters"
+          "guardian_of": "Deep Waters",
+          "video_url": ""
         },
         {
           "image_url": "",
@@ -949,7 +1037,8 @@
           "persian_script": "نریوسنگ",
           "gender": "Male",
           "role": "Messenger bringing fire.",
-          "guardian_of": "Divine Messages"
+          "guardian_of": "Divine Messages",
+          "video_url": ""
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Vayu.jpg",
@@ -959,7 +1048,8 @@
           "persian_script": "وای",
           "gender": "Male",
           "role": "God of space between earth/sky.",
-          "guardian_of": "Breath of Life"
+          "guardian_of": "Breath of Life",
+          "video_url": ""
         }
       ]
     }
