@@ -8,7 +8,7 @@
           "image_url": "https://vohuman.github.io/yazatas/images/Bahman.jpg",
           "name_avestan": "Vohu Manah",
           "alias_persian": "Bahman",
-          "complete_meaning": "Good Mind / Good Purpose",
+          "complete_meaning": "Good Mind / Good Thoughts",
           "persian_script": "بهمن",
           "gender": "Male",
           "role": "Representative of God; welcomes souls.",
@@ -215,7 +215,7 @@
       "description": "Divinities governing the flow of time and liturgical watches.",
       "entities": [
         {
-          "image_url": "/yazatas/images/Zurvan.jpg",
+          "image_url": "/yazatas/images/Zarvan.jpg",
           "name_avestan": "Zurvan",
           "alias_persian": "ZARVAN AKRANA",
           "complete_meaning": "Time",
