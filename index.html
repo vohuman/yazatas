@@ -443,8 +443,17 @@
             if (!entity.suppress_image) {
                 let innerContent = '';
                 
-                // Specific override for Dahman Afrin and Fravashi to handle taller/wider images
-                const heightClass = (entity.name_avestan === 'Dahman Afrin' || entity.name_avestan === 'Fravashi') ? 'h-64' : 'h-40';
+                // --- Dimension Override Logic ---
+                // Dahman Afrin & Fravashi: fixed tall height
+                // Zurvan: Auto height (fits content completely)
+                // Default: Fixed standard height
+                
+                const isZurvan = entity.name_avestan.includes('Zurvan');
+                const isTall = entity.name_avestan === 'Dahman Afrin' || entity.name_avestan === 'Fravashi';
+
+                let heightClass = 'h-40';
+                if (isTall) heightClass = 'h-64';
+                if (isZurvan) heightClass = 'h-auto min-h-[10rem]'; // Allows container to grow with image
 
                 // Base Image Content
                 if (Array.isArray(entity.image_url) && entity.image_url.length > 1) {
@@ -460,8 +469,14 @@
                     // Single Image
                     const imgSrc = Array.isArray(entity.image_url) ? entity.image_url[0] : entity.image_url;
                     
+                    // Specific class for image to handle fitting vs covering
+                    // If Zurvan, we remove absolute positioning and let it flow naturally (w-full h-auto)
+                    const imgStyleClass = isZurvan 
+                        ? 'w-full h-auto block relative z-10' 
+                        : 'w-full h-full object-cover relative z-10 block';
+
                     innerContent = imgSrc 
-                        ? `<img src="${imgSrc}" alt="${entity.name_avestan}" class="w-full h-full object-cover relative z-10 block">`
+                        ? `<img src="${imgSrc}" alt="${entity.name_avestan}" class="${imgStyleClass}">`
                         : `<div class="w-full h-full flex flex-col items-center justify-center text-stone-300 bg-stone-50 relative z-10">
                                 <i class="fa-solid fa-image text-2xl mb-2 opacity-50"></i>
                                 <span class="text-[10px] font-cinzel uppercase tracking-widest opacity-50">Image Pending</span>
