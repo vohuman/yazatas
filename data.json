@@ -911,7 +911,7 @@
       "description": "Generals of the Sky and Constellations.",
       "entities": [
         {
-          "image_url": "",
+          "image_url": "https://vohuman.github.io/yazatas/images/Vanant.jpg",
           "name_avestan": "Vanant",
           "alias_persian": "Vanant",
           "complete_meaning": "The Conqueror",
