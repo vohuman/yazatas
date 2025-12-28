@@ -198,7 +198,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Vourukasha.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Vourukasha.jpg",
           "name_avestan": "Vourukasha",
           "alias_persian": "Frakhvkart",
           "complete_meaning": "Wide-Gulfed",
@@ -215,7 +215,7 @@
       "description": "Divinities governing the flow of time and liturgical watches.",
       "entities": [
         {
-          "image_url": "/yazatas/images/Zarvan.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Zarvan.jpg",
           "name_avestan": "Zurvan",
           "alias_persian": "ZARVAN AKRANA",
           "complete_meaning": "Time",
@@ -226,7 +226,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Saredha.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Saredha.jpg",
           "name_avestan": "Saredha",
           "alias_persian": "Sal",
           "complete_meaning": "The Year",
@@ -237,7 +237,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Havan.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Havan.jpg",
           "name_avestan": "Havana",
           "alias_persian": "Havan",
           "complete_meaning": "The Mortar / Morning",
@@ -248,7 +248,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Rapithwin.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Rapithwin.jpg",
           "name_avestan": "Rapithwin",
           "alias_persian": "Rapithwin",
           "complete_meaning": "Midday",
@@ -259,7 +259,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Uzerin.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Uzerin.jpg",
           "name_avestan": "Uzayeirina",
           "alias_persian": "Uzerin",
           "complete_meaning": "High Part (Afternoon)",
@@ -270,7 +270,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Aiwisruthrem.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Aiwisruthrem.jpg",
           "name_avestan": "Aiwisruthrema",
           "alias_persian": "Aiwisruthrem",
           "complete_meaning": "Life-Furthering",
@@ -281,7 +281,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Ushahin.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Ushahin.jpg",
           "name_avestan": "Ushahin",
           "alias_persian": "Ushahin",
           "complete_meaning": "Increasing Light",
@@ -292,7 +292,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Antare.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Antare.jpg",
           "name_avestan": "Antare-Mah",
           "alias_persian": "Inter-Moon",
           "complete_meaning": "Between the Moon (New Moon)",
@@ -303,7 +303,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Pereno.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Pereno.jpg",
           "name_avestan": "Pereno-Mah",
           "alias_persian": "Pereno-Mah",
           "complete_meaning": "The Full Moon.",
@@ -314,7 +314,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Visaptatha.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/yazatas/images/Visaptatha.jpg",
           "name_avestan": "Višaptatha-Māh",
           "alias_persian": "Vishaptatha-Mah",
           "complete_meaning": "The Moon of the seven-day period.",
