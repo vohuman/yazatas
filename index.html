@@ -444,25 +444,25 @@
                 let innerContent = '';
                 
                 // --- Dimension Override Logic ---
-                // Dahman Afrin & Fravashi: fixed tall height
                 // Zurvan: Auto height (fits content completely)
-                // Default: Fixed standard height
+                // Default: Taller fixed height for better visibility
                 
                 const isZurvan = entity.name_avestan.includes('Zurvan');
                 const isTall = entity.name_avestan === 'Dahman Afrin' || entity.name_avestan === 'Fravashi';
 
-                let heightClass = 'h-40';
-                if (isTall) heightClass = 'h-64';
-                if (isZurvan) heightClass = 'h-auto min-h-[10rem]'; // Allows container to grow with image
+                // Increased default height significantly to prevent cropping
+                let heightClass = 'h-64 md:h-80';
+                if (isTall) heightClass = 'h-80 md:h-96';
+                if (isZurvan) heightClass = 'h-auto min-h-[16rem]'; // Allows container to grow with image
 
                 // Base Image Content
                 if (Array.isArray(entity.image_url) && entity.image_url.length > 1) {
                      innerContent = `
                         <div class="relative w-full h-full group/image z-10">
                             <!-- Bottom Image (Revealed on Hover) -->
-                            <img src="${entity.image_url[1]}" alt="${entity.name_avestan} Alternate" class="absolute inset-0 w-full h-full object-cover">
+                            <img src="${entity.image_url[1]}" alt="${entity.name_avestan} Alternate" class="absolute inset-0 w-full h-full object-cover object-top">
                             <!-- Top Image (Hidden on Hover) -->
-                            <img src="${entity.image_url[0]}" alt="${entity.name_avestan}" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-100 group-hover/image:opacity-0">
+                            <img src="${entity.image_url[0]}" alt="${entity.name_avestan}" class="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 ease-in-out opacity-100 group-hover/image:opacity-0">
                         </div>
                     `;
                 } else {
@@ -470,10 +470,10 @@
                     const imgSrc = Array.isArray(entity.image_url) ? entity.image_url[0] : entity.image_url;
                     
                     // Specific class for image to handle fitting vs covering
-                    // If Zurvan, we remove absolute positioning and let it flow naturally (w-full h-auto)
+                    // Added object-top to prioritize faces/heads in vertical crops
                     const imgStyleClass = isZurvan 
                         ? 'w-full h-auto block relative z-10' 
-                        : 'w-full h-full object-cover relative z-10 block';
+                        : 'w-full h-full object-cover object-top relative z-10 block';
 
                     innerContent = imgSrc 
                         ? `<img src="${imgSrc}" alt="${entity.name_avestan}" class="${imgStyleClass}">`
