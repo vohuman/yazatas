@@ -712,7 +712,7 @@
       "description": "Active forces that accompany the great Yazatas.",
       "entities": [
         {
-          "image_url": "/yazatas/images/Farr.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/images/Farr.jpg",
           "name_avestan": "Kavyam Hvarenah",
           "alias_persian": "Farr / Farrah",
           "complete_meaning": "Divine Glory",
