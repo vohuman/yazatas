@@ -89,7 +89,7 @@
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Mah.jpg",
-          "name_avestan": "Mah",
+          "name_avestan": "Maonghah",
           "alias_persian": "Mah",
           "complete_meaning": "The Moon",
           "persian_script": "ماه",
@@ -134,7 +134,7 @@
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Vata.jpg",
           "name_avestan": "Vata",
-          "alias_persian": "Govad / Bad",
+          "alias_persian": "Govad / Bāqd",
           "complete_meaning": "Wind",
           "persian_script": "باد / گوا",
           "gender": "Male",
@@ -167,9 +167,9 @@
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Thousha.jpg",
           "name_avestan": "Thwasha",
-          "alias_persian": "Faza / Thousha",
+          "alias_persian": "Thousha",
           "complete_meaning": "Personification of Infinite Space",
-          "persian_script": "فضا / ثواشا / توشه",
+          "persian_script": "ثواشا / توشه",
           "gender": "Male",
           "role": "The atmosphere where planets move.",
           "guardian_of": "Cosmic Space",
@@ -219,7 +219,7 @@
           "name_avestan": "Zurvan",
           "alias_persian": "ZARVAN AKRANA",
           "complete_meaning": "Time",
-          "persian_script": "زروان / زمان",
+          "persian_script": "زروان",
           "gender": "Male",
           "role": "Personification of 'Boundless Time'.",
           "guardian_of": "Infinite Time",
