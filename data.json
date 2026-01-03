@@ -77,7 +77,7 @@
       "description": "Personifications of the physical world.",
       "entities": [
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Khorshed.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/images/Khor2.jpg",
           "name_avestan": "Hvar Khshaeta",
           "alias_persian": "Khorshed",
           "complete_meaning": "The Radiant Sun",
@@ -88,7 +88,7 @@
           "video_url": ""
         },
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Moon.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/images/Mah2.jpg",
           "name_avestan": "Maonghah",
           "alias_persian": "Mah",
           "complete_meaning": "The Moon",
