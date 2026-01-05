@@ -18,7 +18,7 @@
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Bahman1.jpg",
           "name_avestan": "Vohu Manah ",
-          "alias_persian": "Bahman / Vahishta Mino",
+          "alias_persian": "Bahman / Vohuman / Vahishta Mino",
           "complete_meaning": "Good Mind / Good Thought",
           "persian_script": "بهمن 𐬬𐬊𐬵𐬎 𐬨𐬀𐬥𐬀𐬵",
           "gender": "Male",
@@ -29,7 +29,7 @@
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Ardibehesht1.jpg",
           "name_avestan": "Asha Vahishta",
-          "alias_persian": "Ordibehesht / Arta Vahishta",
+          "alias_persian": "Ordibehesht / Ardibehesht / Arta Vahishta",
           "complete_meaning": "Best Truth / Righteousness",
           "persian_script": "اردیبهشت 𐬀𐬴𐬀 𐬬𐬀𐬵𐬌𐬱𐬙𐬀",
           "gender": "Male",
@@ -62,7 +62,7 @@
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Khordad0.jpg",
           "name_avestan": "Haurvatat",
-          "alias_persian": "Khordad",
+          "alias_persian": "Khordad / Khurtat",
           "complete_meaning": "Wholeness / Perfection",
           "persian_script": "خرداد 𐬵𐬀𐬎𐬭𐬎𐬎𐬀𐬙𐬁𐬙",
           "gender": "Female",
@@ -73,7 +73,7 @@
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Amurdad.jpg",
           "name_avestan": "Ameretat",
-          "alias_persian": "Amurdad",
+          "alias_persian": "Amordad",
           "complete_meaning": "Immortality",
           "persian_script": "امرداد 𐬀𐬨𐬆𐬭𐬆𐬙𐬁𐬙",
           "gender": "Female",
