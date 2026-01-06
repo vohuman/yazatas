@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Fonts: Cinzel, Lato, and Vazirmatn (for Persian) -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Cinzel, Lato, Vazirmatn (Persian), and Noto Sans Avestan -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&family=Vazirmatn:wght@400;700&family=Noto+Sans+Avestan&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -19,10 +19,11 @@
                         'cinzel': ['Cinzel', 'serif'],
                         'lato': ['Lato', 'sans-serif'],
                         'persian': ['Vazirmatn', 'sans-serif'],
+                        'avestan': ['"Noto Sans Avestan"', 'serif'],
                     },
                     colors: {
                         'persian-gold': '#D4AF47',
-                        'avestan-red': '#D4AF47',
+                        'avestan-red': '#D4AF47', // Keep existing config, though manually using red-400 for the script hover
                         'persian-blue': '#1a5f7a',
                         'deep-rose': '#be123c',
                         'royal-purple': '#7e22ce',
@@ -522,6 +523,25 @@
                         ${indicator}
                     </div>`;
             }
+
+            // --- Script Logic (Persian & Avestan) ---
+            
+            // Persian Script Block
+            const persianScriptHtml = `
+                <div class="text-2xl font-persian text-gray-400 group-hover:text-persian-gold transition-all duration-500 group-hover:[text-shadow:0_0_10px_#D4AF37,0_0_20px_rgba(212,175,55,0.4)] cursor-default text-right" dir="rtl">
+                    ${entity.persian_script}
+                </div>
+            `;
+
+            // Avestan Script Block (Conditional)
+            let avestanScriptHtml = '';
+            if (entity.avestan_script && entity.avestan_script.trim() !== '') {
+                avestanScriptHtml = `
+                    <div class="text-xl font-avestan mt-1 text-gray-400 group-hover:text-red-400 transition-all duration-500 group-hover:[text-shadow:0_0_10px_#f87171,0_0_20px_rgba(248,113,113,0.4)] cursor-default text-right" dir="rtl" title="Avestan Script">
+                        ${entity.avestan_script}
+                    </div>
+                `;
+            }
             
             return `
             <div class="group relative bg-white rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-stone-100 overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${theme.shadow} fade-in">
@@ -543,9 +563,11 @@
                             <h3 class="text-2xl font-cinzel font-bold text-gray-800 leading-none mb-1">${entity.name_avestan}</h3>
                             <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">${entity.alias_persian}</p>
                         </div>
-                        <!-- Persian Script with Golden Hover Glow -->
-                        <div class="text-2xl font-persian text-gray-400 group-hover:text-persian-gold transition-all duration-500 group-hover:[text-shadow:0_0_10px_#D4AF37,0_0_20px_rgba(212,175,55,0.4)] cursor-default" dir="rtl">
-                            ${entity.persian_script}
+                        
+                        <!-- Scripts Container -->
+                        <div class="flex flex-col items-end">
+                            ${persianScriptHtml}
+                            ${avestanScriptHtml}
                         </div>
                     </div>
                     
@@ -659,5 +681,3 @@
     </script>
 </body>
 </html>
-
-
