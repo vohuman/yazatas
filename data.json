@@ -116,7 +116,7 @@
           "gender": "Male",
           "role": "Controls tides and plant growth.",
           "guardian_of": "The Moon / Seed",
-          "video_url": ""
+          "video_url": "https://vohuman.github.io/yazatas/images/Mah2.mp4"
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Tir2.jpg",
@@ -1099,7 +1099,7 @@
           "alias_persian": "Apam Napat",
           "complete_meaning": "Child of the Waters",
           "persian_script": "آپام نپات",
-          "avestan_script": "",
+          "avestan_script": "𐬀𐬞𐬀𐬨 𐬥𐬀𐬞𐬀𐬙",
           "gender": "Male",
           "role": "Associate of Borz; ancient sovereign.",
           "guardian_of": "Deep Waters",
