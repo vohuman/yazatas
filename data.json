@@ -155,6 +155,18 @@
           "video_url": "https://vohuman.github.io/yazatas/images/Azar2.mp4"
         },
         {
+          "image_url": "/yazatas/images/ApamNapat01.png",
+          "name_avestan": "Apam Napat",
+          "alias_persian": "Burz Yazad",
+          "complete_meaning": "Child of the Waters",
+          "persian_script": "آپام نپات",
+          "avestan_script": "𐬀𐬞𐬀𐬨 𐬥𐬀𐬞𐬀𐬙",
+          "gender": "Male",
+          "role": "Associate of Borz; ancient sovereign.",
+          "guardian_of": "Deep Waters",
+          "video_url": "/yazatas/images/ApamNapat01.mp4"
+        },
+        {
           "image_url": "https://vohuman.github.io/yazatas/images/Govat2.jpg",
           "name_avestan": "Vata",
           "alias_persian": "Govad / Bād",
@@ -1091,18 +1103,6 @@
           "gender": "Male",
           "role": "Protector of agriculture.",
           "guardian_of": "Farmers",
-          "video_url": ""
-        },
-        {
-          "image_url": "/yazatas/images/ApamNapat.jpg",
-          "name_avestan": "Apam Napat",
-          "alias_persian": "Apam Napat",
-          "complete_meaning": "Child of the Waters",
-          "persian_script": "آپام نپات",
-          "avestan_script": "𐬀𐬞𐬀𐬨 𐬥𐬀𐬞𐬀𐬙",
-          "gender": "Male",
-          "role": "Associate of Borz; ancient sovereign.",
-          "guardian_of": "Deep Waters",
           "video_url": ""
         },
         {
