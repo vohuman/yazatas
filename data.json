@@ -215,18 +215,6 @@
           "video_url": ""
         },
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Ushah2.jpg",
-          "name_avestan": "Ushah",
-          "alias_persian": "Bamdad",
-          "complete_meaning": "The Dawn",
-          "persian_script": "بامداد / اوشه",
-          "avestan_script": "",
-          "gender": "Female",
-          "role": "Goddess of natural dawn light.",
-          "guardian_of": "Early Morning",
-          "video_url": "https://vohuman.github.io/yazatas/images/Ushah.mp4"
-        },
-        {
           "image_url": "https://vohuman.github.io/yazatas/images/Kuh2.jpg",
           "name_avestan": "Gairis",
           "alias_persian": "Kuh",
@@ -279,6 +267,18 @@
           "role": "Presides over the annual cycle.",
           "guardian_of": "The Solar Year",
           "video_url": ""
+        },
+        {
+          "image_url": "https://vohuman.github.io/yazatas/images/Ushah2.jpg",
+          "name_avestan": "Ushah",
+          "alias_persian": "Bamdad",
+          "complete_meaning": "The Dawn",
+          "persian_script": "بامداد / اوشه",
+          "avestan_script": "",
+          "gender": "Female",
+          "role": "Goddess of natural dawn light.",
+          "guardian_of": "Early Morning",
+          "video_url": "https://vohuman.github.io/yazatas/images/Ushah.mp4"
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Havan.jpg",
