@@ -18,7 +18,7 @@
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Bahman1.jpg",
-          "name_avestan": "Vohu Manah ",
+          "name_avestan": "Vohu Manah",
           "alias_persian": "Bahman / Vohuman / Vahishta Mino",
           "complete_meaning": "Good Mind / Good Thought",
           "persian_script": "بهمن",
@@ -374,6 +374,18 @@
           "gender": "Male",
           "role": "Ensuring the steady progression of time and the continuity of the lunar cycle. He represents the wisdom of transition.",
           "guardian_of": "The orderly decline and transition of that power back toward the new moon. Plants and animals, seeds of bull.",
+          "video_url": ""
+        },
+        {
+          "image_url": "https://vohuman.github.io/yazatas/images/Mahya.jpg",
+          "name_avestan": "Mahya",
+          "alias_persian": "Mahya",
+          "complete_meaning": "Moonlight",
+          "persian_script": "مهیا",
+          "avestan_script": "",
+          "gender": "Male",
+          "role": "Nurturer of life, Calmer of the mind, and Provider of divine fortune",
+          "guardian_of": "Animals and Nature",
           "video_url": ""
         }
       ]
