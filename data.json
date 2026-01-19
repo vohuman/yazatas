@@ -479,7 +479,7 @@
           "video_url": ""
         },
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Ada.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/images/Ada01.png",
           "name_avestan": "Ada",
           "alias_persian": "Ada",
           "complete_meaning": "Allocation / Reward",
@@ -605,7 +605,7 @@
           "video_url": "https://vohuman.github.io/yazatas/images/Hom01.mp4"
         },
         {
-          "image_url": "/yazatas/images/Aryaman.jpg",
+          "image_url": "/yazatas/images/Aryaman.png",
           "name_avestan": "Airyaman",
           "alias_persian": "Aryaman",
           "complete_meaning": "Friendship",
@@ -629,9 +629,9 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Trita.jpg",
+          "image_url": "/yazatas/images/Thrita.png",
           "name_avestan": "Thrita",
-          "alias_persian": "Thrit",
+          "alias_persian": "Thraetaona",
           "complete_meaning": "The Third One",
           "persian_script": "تریتا",
           "avestan_script": "",
