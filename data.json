@@ -503,7 +503,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Tushnamaiti.jpg",
+          "image_url": "/yazatas/images/Tushnamaiti.png",
           "name_avestan": "Tushnamaiti",
           "alias_persian": "Khamoshi",
           "complete_meaning": "Silent Meditation",
@@ -512,7 +512,7 @@
           "gender": "Female",
           "role": "Discipline of the mind.",
           "guardian_of": "Meditation",
-          "video_url": "https://vohuman.github.io/yazatas/images/Khamoshi.mp4"
+          "video_url": ""
         },
         {
           "image_url": "/yazatas/images/Rast2.jpg",
@@ -719,7 +719,7 @@
       "description": "Spiritual judges of social units and rituals.",
       "entities": [
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Ratu.jpg",
+          "image_url": "https://vohuman.github.io/yazatas/images/Ratu.png",
           "name_avestan": "Ratu-Berezit",
           "alias_persian": "Ratu-Borz",
           "complete_meaning": "The High Master",
