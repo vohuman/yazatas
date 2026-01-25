@@ -719,7 +719,7 @@
       "description": "Spiritual judges of social units and rituals.",
       "entities": [
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Ratu.png",
+          "image_url": "https://vohuman.github.io/yazatas/images/Ratu02.png",
           "name_avestan": "Ratu-Berezit",
           "alias_persian": "Ratu-Borz",
           "complete_meaning": "The High Master",
@@ -731,7 +731,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Nmanya.jpg",
+          "image_url": "/yazatas/images/Nmanya.png",
           "name_avestan": "Nmanya",
           "alias_persian": "Nmanya",
           "complete_meaning": "Lord of the House",
@@ -755,7 +755,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Zantuma.jpg",
+          "image_url": "/yazatas/images/Zantuma.png",
           "name_avestan": "Zantuma",
           "alias_persian": "Zantuma",
           "complete_meaning": "Lord of the District",
@@ -779,7 +779,7 @@
           "video_url": ""
         },
         {
-          "image_url": "/yazatas/images/Dahyu.jpg",
+          "image_url": "/yazatas/images/Dahyu.png",
           "name_avestan": "Dahyu",
           "alias_persian": "Dahyu",
           "complete_meaning": "The Land / Country",
@@ -809,7 +809,7 @@
           "video_url": "https://vohuman.github.io/yazatas/images/Far2.mp4"
         },
         {
-          "image_url": "/yazatas/images/Hamvareti.jpg",
+          "image_url": "/yazatas/images/Nairya.png",
           "name_avestan": "Nairya Hamvareti",
           "alias_persian": "Nairy-Hamvar",
           "complete_meaning": "Manly Courage",
