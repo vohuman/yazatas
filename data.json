@@ -440,7 +440,7 @@
           "gender": "Male",
           "role": "Divinity of victory in battle.",
           "guardian_of": "Victory",
-          "video_url": ""
+          "video_url": "https://vohuman.github.io/yazatas/images/Bahram01.mp4"
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Ashi.png",
@@ -728,7 +728,7 @@
           "gender": "Male",
           "role": "Spiritual title of officiating priest.",
           "guardian_of": "Ritual Authority",
-          "video_url": ""
+          "video_url": "https://vohuman.github.io/yazatas/images/Ratu02.mp4"
         },
         {
           "image_url": "/yazatas/images/Nmanya.png",
@@ -740,7 +740,7 @@
           "gender": "Male",
           "role": "Judge of the family unit.",
           "guardian_of": "The Home",
-          "video_url": ""
+          "video_url": "https://vohuman.github.io/yazatas/images/Nmanya.mp4"
         },
         {
           "image_url": "/yazatas/images/Visya.jpg",
@@ -764,10 +764,10 @@
           "gender": "Male",
           "role": "Judge of the wider region.",
           "guardian_of": "The District",
-          "video_url": ""
+          "video_url": "https://vohuman.github.io/yazatas/images/Zantuma.mp4"
         },
         {
-          "image_url": "",
+          "image_url": "https://vohuman.github.io/yazatas/images/Dakhyuma",
           "name_avestan": "Dakhyuma",
           "alias_persian": "Dakhyuma",
           "complete_meaning": "Lord of the Country",
@@ -830,7 +830,7 @@
           "gender": "Male",
           "role": "The force/stamina of victory.",
           "guardian_of": "Physical Strength",
-          "video_url": ""
+          "video_url": "https://vohuman.github.io/yazatas/images/Ama.mp4"
         },
         {
           "image_url": "",
