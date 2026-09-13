@@ -166,7 +166,6 @@
           "guardian_of": "Deep Waters",
           "video_url": "/yazatas/images/ApamNapat02.mp4"
         },
-        
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Vata02.png",
           "name_avestan": "Vata",
@@ -192,7 +191,7 @@
           "video_url": "https://vohuman.github.io/yazatas/images/Zam02.mp4"
         },
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Asman02.png",
+          "image_url": "https://vohuman.github.io/yazatas/images/Sky02.png",
           "name_avestan": "Asman",
           "alias_persian": "Asman",
           "complete_meaning": "The Sky",
@@ -201,7 +200,7 @@
           "gender": "Male",
           "role": "The crystalline dome protecting earth.",
           "guardian_of": "The Firmament",
-          "video_url": "https://vohuman.github.io/yazatas/images/Asman02.mp4"
+          "video_url": "https://vohuman.github.io/yazatas/images/Sky02.mp4"
         },
         {
           "image_url": "https://vohuman.github.io/yazatas/images/Thousha2.jpg",
