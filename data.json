@@ -329,18 +329,6 @@
           "video_url": ""
         },
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Pereno.jpg",
-          "name_avestan": "Pereno-Mah",
-          "alias_persian": "Pereno-Mah",
-          "complete_meaning": "The Full Moon.",
-          "persian_script": "پرنو ماه / ماه پر",
-          "avestan_script": "",
-          "gender": "Male",
-          "role": "Transition from new moon with the full moon.",
-          "guardian_of": "Life and animals, especially the primordial bull, Gavaevodata.",
-          "video_url": ""
-        },
-        {
           "image_url": "https://vohuman.github.io/yazatas/images/Vishaptatha.png",
           "name_avestan": "Višaptatha-Māh",
           "alias_persian": "Vishaptatha-Mah",
@@ -353,15 +341,15 @@
           "video_url": ""
         },
         {
-          "image_url": "https://vohuman.github.io/yazatas/images/Mahya2.png",
-          "name_avestan": "Mahya",
-          "alias_persian": "Mahya",
-          "complete_meaning": "Moonlight",
-          "persian_script": "مهیا",
-          "avestan_script": "𐬨𐬁𐬵𐬫𐬀",
+          "image_url": "https://vohuman.github.io/yazatas/images/Pereno.jpg",
+          "name_avestan": "Pereno-Mah",
+          "alias_persian": "Pereno-Mah",
+          "complete_meaning": "The Full Moon.",
+          "persian_script": "پرنو ماه / ماه پر",
+          "avestan_script": "",
           "gender": "Male",
-          "role": "Nurturer of life, Calmer of the mind, and Provider of divine fortune",
-          "guardian_of": "Moon and Time; Livestock and Plants; Natural and Biological Fluids; Mental Peace and Destiny; Seed of the Bull",
+          "role": "Transition from new moon with the full moon.",
+          "guardian_of": "Life and animals, especially the primordial bull, Gavaevodata.",
           "video_url": ""
         }
       ]
